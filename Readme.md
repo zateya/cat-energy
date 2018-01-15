@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Ольга Коваль](https://up.htmlacademy.ru/adaptive/13/user/114667).
-* Наставник: `Неизвестно`.
+* Студент: [Ольга Коваль](https://htmlacademy.ru/profile/zateya).
+* Наставник: [Анастасия Шевченко](https://htmlacademy.ru/profile/id125164).
 
 ---
 
