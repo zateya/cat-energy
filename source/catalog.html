@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Каталог продукции Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page">
 
@@ -10,14 +12,14 @@
       <div class="page-header__layout">
         <div class="page-header__logo-block">
           <a class="page-header__logo-link" href="index.html">
-            <img class="page-header__logo" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип Cat Energy">
+            <img class="page-header__logo" src="img/icon-logo-mobile.svg" width="34" height="38" alt="Логотип Cat Energy">
           </a>
           <a class="page-header__logo-sign-link" href="index.html">
-            <img class="page-header__logo-sign" src="http://placehold.it/101x18" width="101" height="18" alt="Cat Energy">
+            <img class="page-header__logo-sign" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
           </a>
         </div>
         <nav class="main-nav">
-          <button class="main-nav__toggle main-nav__toggle--opened" type="button">Меню</button>
+          <button class="main-nav__toggle main-nav__toggle--hidden" type="button"><span class="main-nav__toggle-bar">Меню</span></button>
           <ul class="main-nav__items">
             <li class="main-nav__item">
               <a class="main-nav__item-link" href="index.html">Главная</a>
@@ -34,67 +36,77 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page-title">Каталог продукции</h1>
+      <div class="page-main__title-container container">
+        <h1 class="page-main__title title">Каталог продукции</h1>
+      </div>
 
-      <ul class="catalog">
-        <li class="catalog__item">
-          <div class="product">
-            <div class="product__layout">
-              <div class="product__img-block">
-                <a class="product__img-link" href="#">
-                  <img class="product__img" src="http://placehold.it/140x144" width="140" height="144" alt="Cat Energy Pro 500 г">
-                </a>
+      <section class="page-main__catalog catalog">
+        <div class="catalog__container container container--catalog">
+          <h2 class="visually-hidden">Список товаров</h2>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <div class="product">
+                <div class="product__layout">
+                  <div class="product__img-block">
+                    <a class="product__img-link" href="#">
+                      <img class="product__img" src="img/chicken-small-mobile@1x.jpg" width="140" height="144" alt="Cat Energy Pro 500 г">
+                    </a>
+                  </div>
+                  <div class="product__info-block">
+                    <h3 class="product__title">Cat Energy <span class="product__subtitle">Pro 500 г</span></h3>
+                    <ul class="product__info">
+                      <li class="product__info-item">
+                        <div class="product__info-category">Объем</div>
+                        <div class="product__info-value">500 г.</div>
+                      </li>
+                      <li class="product__info-item">
+                        <div class="product__info-category">Вкус</div>
+                        <div class="product__info-value">Курица</div>
+                      </li>
+                      <li class="product__info-item">
+                        <div class="product__info-category">Цена</div>
+                        <div class="product__info-value product__info-value--price">700 p.</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a class="product__link button" href="#">Заказать</a>
               </div>
-              <div class="product__info-block">
-                <h2 class="product__title">Cat Energy <span class="product__subtitle">Pro 500 г</span></h2>
-                <ul class="product__info">
-                  <li class="product__info-item">
-                    <div class="product__info-category">Объем</div>
-                    <div class="product__info-value">500 г.</div>
-                  </li>
-                  <li class="product__info-item">
-                    <div class="product__info-category">Вкус</div>
-                    <div class="product__info-value">Курица</div>
-                  </li>
-                  <li class="product__info-item">
-                    <div class="product__info-category">Цена</div>
-                    <div class="product__info-value product__info-value--price">700 p.</div>
-                  </li>
-                </ul>
+            </li>
+            <li class="catalog__item">
+              <div class="more-products">
+                <h3 class="more-products__title">Показать еще 100500 товаров</h3>
+                <p class="more-products__lead">На самом деле вкусов гораздо больше!</p>
+                <a class="more-products__link button button--info" href="#">Показать все</a>
               </div>
-            </div>
-            <a class="product__link button" href="#">Заказать</a>
-          </div>
-        </li>
-        <li class="catalog__item">
-          <div class="more-products">
-            <h2 class="more-products__title">Показать еще 100500 товаров</h2>
-            <p class="more-products__lead">На самом деле вкусов гораздо больше!</p>
-            <a class="more-products__link button button--info" href="#">Показать все</a>
-          </div>
-        </li>
-      </ul>
-
-      <section class="extra-products">
-        <h2 class="extra-products__title">Дополнительные товары</h2>
-
-        <ul class="extra-products__list">
-          <li class="extra-products__item">
-            <div class="extra-product">
-              <h3 class="extra-product__title">Сахарозаменитель</h3>
-              <div class="extra-product__info">
-                <div class="extra-product__info-amount">1 Упаковка</div>
-                <div class="extra-product__info-price">100 p.</div>
-              </div>
-              <a class="extra-product__link button" href="#">Заказать</a>
-            </div>
-          </li>
-        </ul>
-
-        <a class="promo" href="#">
-          <h3 class="promo__text">Закажите все и получите чехол для кота в подарок!</h3>
-        </a>
+            </li>
+          </ul>
+        </div>
       </section>
+
+      <section class="page-main__extra-products extra-products">
+        <div class="extra-products__container container">
+          <h2 class="extra-products__subtitle subtitle">Дополнительные товары</h2>
+
+          <ul class="extra-products__list">
+            <li class="extra-products__item">
+              <div class="extra-product">
+                <h3 class="extra-product__title">Сахарозаменитель</h3>
+                <div class="extra-product__info">
+                  <div class="extra-product__info-amount">1 Упаковка</div>
+                  <div class="extra-product__info-price">100 p.</div>
+                </div>
+                <a class="extra-product__link button" href="#">Заказать</a>
+              </div>
+            </li>
+          </ul>
+
+          <a class="page-main__promo promo" href="#">
+            <h3 class="promo__text">Закажите все и получите чехол для кота в подарок!</h3>
+          </a>
+        </div>
+      </section>
+
     </main>
 
     <footer class="page-footer">
@@ -103,15 +115,16 @@
         <div class="contacts__container container">
           <div class="contacts__layout">
             <div class="contacts__title-block">
-              <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+              <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
             </div>
             <div class="contacts__info-block">
               <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
             </div>
           </div>
-          <div class="contacts__map">
-            <img class="contacts__map-img" src="http://placehold.it/768x361" width="768" height="361" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
-          </div>
+        </div>
+        <div class="contacts__map-wrapper">
+          <img class="contacts__map-img" src="img/map.png" width="320" height="362" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          <div class="contacts__map" id="map">Схема проезда</div>
         </div>
       </section>
 
@@ -120,26 +133,46 @@
           <div class="page-footer__layout">
             <div class="page-footer__logo-block">
               <a class="page-footer__logo-link" href="index.html">
-                <img class="page-footer__logo" src="http://placehold.it/128x24" width="128" height="24" alt="Cat Energy">
+                <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
               </a>
             </div>
             <div class="page-footer__social-block">
               <ul class="page-footer__social social">
                 <li class="social__item">
-                  <a class="social__item-link social__item-link--vk" href="https://vk.com/htmlacademy" target="_blank">вКонтакте</a>
+                  <a class="social__item-link" href="https://vk.com/htmlacademy" target="_blank">
+                    <svg class="social__item-icon social__item-icon--vk" width="22" height="12" viewBox="0 0 22 12">
+                      <title>вКонтакте</title>
+                      <path d="M17.6 12c-.3 0-.9-.1-1.5-.5-.5-.3-.9-.7-1.3-1.2-.3-.3-.9-.9-1.1-.9-.2.1-.4.7-.3 1.2 0 .1 0 .6-.3.9-.3.3-.8.4-.9.4h-1.4c-.7 0-3.2-.2-5.4-2.3C2.5 7.1.2 2.2.1 2 0 1.6-.1 1.2.2.9c.3-.3.8-.4 1-.4h3.1c.1 0 .4.1.7.3.3.2.4.5.5.6 0 0 .5 1.1 1.1 2 1 1.5 1.4 1.9 1.5 2 .1-.4.2-1.4.1-2.3 0-.4-.1-.8-.2-1-.1-.1-.3-.2-.5-.2l-.6-.5c0-.5.5-.9.9-1.1.5-.2 1.3-.3 2.3-.3h.5c.9 0 1.2.1 1.6.1 1.2.3 1.2 1.3 1.1 2.5v1.6c0 .3 0 .8.1 1 .2-.1.6-.5 1.5-1.9.6-.9 1-1.9 1.1-2.1.1-.3.4-.7 1.2-.7h3.4c.7 0 1.2.2 1.3.7.2.5.1 1.3-1.7 3.5-.3.3-.5.6-.7.9-.5.4-.9 1-.9 1.1 0 .1.5.5.9.9 1.1.9 1.9 1.7 2.2 2.3.4.6.3 1 .2 1.3-.3.7-1.2.7-1.4.8h-2.8-.1zm-3.9-3.7c.7 0 1.2.6 1.8 1.2.4.4.7.8 1.1 1 .5.3 1 .3 1 .3h2.9c.1 0 .3-.1.4-.1 0 0 0-.1-.1-.1-.3-.5-1-1.3-2-2.1-.9-.7-1.3-1.1-1.4-1.7 0-.6.4-1.1 1.2-2.1.2-.2.4-.5.7-.8 1.1-1.4 1.4-2 1.5-2.3H16.9c0 .4-.5 1.5-1.1 2.4-1.4 2.1-2 2.4-2.5 2.4-.1 0-.3 0-.4-.1-.7-.4-.7-1.4-.7-2.1v-.3-1.3c.1-1.3 0-1.3-.3-1.4-.3-.1-.5-.1-1.4-.1H10c-.5 0-1 0-1.4.1l.2.2c.4.5.4 1.5.4 1.7.1 1.3 0 2.9-.7 3.3-.1 0-.2.1-.4.1-.6 0-1.3-.7-2.5-2.5C5 2.9 4.5 1.8 4.5 1.8s0-.1-.1-.1-.2-.1-.2-.1H1.3h-.1c.4.9 2.5 5 4.8 7.2 2 1.9 4.3 2 4.7 2h1.4s.2 0 .2-.1v-.1c0-.2 0-2 1.2-2.3h.2z"/>
+                    </svg>
+                  </a>
                 </li>
                 <li class="social__item">
-                  <a class="social__item-link social__item-link--inst" href="https://www.instagram.com/htmlacademy/" target="_blank">Instagram</a>
+                  <a class="social__item-link" href="https://www.instagram.com/htmlacademy/" target="_blank">
+                    <svg class="social__item-icon social__item-icon--inst" width="16" height="16" viewBox="0 0 16 16">
+                      <title>Instagram</title>
+                      <path d="M11.8 1C13.6 1 15 2.4 15 4.2v7.7c0 1.7-1.4 3.1-3.1 3.1H4.2C2.4 15 1 13.6 1 11.8V4.2C1 2.4 2.4 1 4.2 1h7.6m0-1H4.2C1.9 0 0 1.9 0 4.2v7.7C0 14.1 1.9 16 4.2 16h7.7c2.3 0 4.2-1.9 4.2-4.2V4.2C16 1.9 14.1 0 11.8 0z"/>
+                      <path d="M8 4.9c1.7 0 3.1 1.4 3.1 3.1 0 1.7-1.4 3.1-3.1 3.1-1.7 0-3.1-1.4-3.1-3.1 0-1.7 1.4-3.1 3.1-3.1m0-1C5.7 3.9 3.9 5.7 3.9 8s1.8 4.1 4.1 4.1 4.1-1.8 4.1-4.1S10.3 3.9 8 3.9z"/>
+                      <circle cx="12.3" cy="3.7" r=".9"/>
+                    </svg>
+                  </a>
                 </li>
                 <li class="social__item">
-                  <a class="social__item-link social__item-link--fb" href="https://www.facebook.com/htmlacademy" target="_blank">Facebook</a>
+                  <a class="social__item-link" href="https://www.facebook.com/htmlacademy" target="_blank">
+                    <svg class="social__item-icon social__item-icon--fb" width="10" height="19" viewBox="0 0 10 19">
+                      <title>Facebook</title>
+                      <path d="M7.1 19H2v-8.8H0V5.8h1.9c-.1-2 .2-3.4 1.1-4.4C3.8.5 5 .1 6.5 0H10v4.2H7.2c-.1.2-.2.8-.2 1.6h3v4.4H7.1V19zm-4-1h2.8V9.1h2.9V6.8H5.9v-.5c0-1.4 0-2.6.7-3.1l.1-.1h2.1V1H6.5c-1.2.1-2 .4-2.6 1-.8.8-1 2.3-.8 4.2l.1.6H1.1v2.3h2V18z"/>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </div>
             <div class="page-footer__copy-block">
               <a class="page-footer__copy-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
                 <span class="page-footer__copy-sign">HTML Academy</span>
-                <img class="page-footer__copy-logo" src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy">
+                <svg class="page-footer__copy-logo" width="27" height="34" viewBox="0 0 27 34">
+                  <title>HTML Academy</title>
+                  <path d="M13.62.017L13.472 0 0 1.412v24.661l13.472 8.017 13.43-7.99.042-.026V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.547-1.212 11.547 1.212v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.013 1.415 5.904 3.513-.86.507-5.031-2.992-.013 1.415 3.827 2.275-.782.523-3.032-1.787-.013 1.413 1.852 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.015 1.044-7.941-4.728-.015 1.416 7.979 4.796.017 1.076-7.972-4.741-.013 1.415 8.021 4.821.045.026 8.143-4.872v-1.268l-.011-.148v-3.761l3.415-2.036v10.02L13.472 31.85 1.925 24.979v-9.852z"/>
+                </svg>
               </a>
             </div>
           </div>
@@ -148,5 +181,7 @@
 
     </footer>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

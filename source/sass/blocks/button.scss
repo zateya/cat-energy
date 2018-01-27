@@ -1,0 +1,44 @@
+.button {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  padding: 10px 22px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald", Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #68b738;
+  border: 0;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #5eaa2f;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button--long-text.button {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 11px 22px;
+}
+
+.button--info.button {
+  color: inherit;
+  background-color: #f2f2f2;
+}
+
+.button--info.button:hover,
+.button--info.button:focus {
+  background-color: #ebebeb;
+}
+
+.button--info.button:active {
+  color: rgba(68, 68, 68, 0.3);
+}
