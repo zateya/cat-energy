@@ -1,20 +1,17 @@
 .intro {
   margin-bottom: 22px;
   text-align: center;
-  color: #ffffff;
-  background-color: #63a73a;
-  background-image: linear-gradient(to top, #ffffff 175px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
+  color: $white;
+  background-color: $green-darker;
+  background-image: linear-gradient(to top, $white 175px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center bottom, center bottom 175px;
 }
 
 .intro__text-block {
   position: relative;
-  max-width: 320px;
   min-height: 168px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 28px 20px;
+  padding: 28px 0;
 }
 
 .intro .intro__title {
@@ -29,19 +26,10 @@
 }
 
 .intro__img {
-  position: relative;
   display: block;
   width: 280px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .intro__link-block {
-  position: relative;
-  max-width: 320px;
   margin-top: 3px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
 }

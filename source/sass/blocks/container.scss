@@ -4,16 +4,11 @@
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+
   @include reset-child-margins;
-}
 
-
-.container--catalog.container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.container--form.container {
-  padding-left: 0;
-  padding-right: 0;
+  &--inner {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

@@ -13,9 +13,9 @@
 .toggle__label {
   font-size: 16px;
   line-height: 20px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
-  color: #111111;
+  color: $almost-black;
   user-select: none;
 }
 
@@ -25,8 +25,8 @@
   width: 84px;
   height: 14px;
   margin: 0 18px;
-  background-color: #ffffff;
-  border: 1px solid #cdcdcd;
+  background-color: $white;
+  border: 1px solid $grey80;
   border-radius: 6px;
 
   &::before {
@@ -37,7 +37,7 @@
     left: 5px;
     width: 35px;
     height: 6px;
-    background-color: #68b738;
+    background-color: $green;
     border-radius: 3px;
     transition: all 0.3s ease;
   }
@@ -50,10 +50,10 @@
 .toggle__img {
   order: -1;
   margin-bottom: 35px;
-}
 
-.toggle__img--on {
-  display: none;
+  &--on {
+    display: none;
+  }
 }
 
 .toggle__input:checked ~ .toggle__img--on {

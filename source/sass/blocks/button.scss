@@ -5,22 +5,22 @@
   padding: 10px 22px;
   font-size: 16px;
   line-height: 20px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #68b738;
+  color: $white;
+  background-color: $green;
   border: 0;
-}
 
-.button:hover,
-.button:focus {
-  background-color: #5eaa2f;
-}
+  &:hover,
+  &:focus {
+    background-color: $green-darker;
+  }
 
-.button:active {
-  color: rgba(255, 255, 255, 0.3);
+  &:active {
+    color: rgba($white, 0.3);
+  }
 }
 
 .button--long-text.button {
@@ -30,15 +30,15 @@
 }
 
 .button--info.button {
-  color: inherit;
-  background-color: #f2f2f2;
-}
+  color: $grey-dark;
+  background-color: $grey95;
 
-.button--info.button:hover,
-.button--info.button:focus {
-  background-color: #ebebeb;
-}
+  &:hover,
+  &:focus {
+    background-color: $grey92;
+  }
 
-.button--info.button:active {
-  color: rgba(68, 68, 68, 0.3);
+  &:active {
+    color: rgba($grey-dark, 0.3);
+  }
 }

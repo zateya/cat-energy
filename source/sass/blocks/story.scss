@@ -1,7 +1,7 @@
 .story {
   padding-top: 29px;
   padding-bottom: 36px;
-  background-color: #f2f2f2;
+  background-color: $grey95;
 }
 
 .story__title {
@@ -24,10 +24,10 @@
   width: calc(50% - 16px);
   text-align: center;
   border-radius: 3px;
-}
 
-.story__stats-item:nth-child(even) {
-  margin-left: 32px;
+  &:nth-child(even) {
+    margin-left: 32px;
+  }
 }
 
 .story__stats-value {
@@ -35,10 +35,10 @@
   padding: 15px 10px;
   font-size: 24px;
   line-height: 24px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
-  color: #111111;
-  border: 1px solid #cfcfcf;
+  color: $almost-black;
+  border: 1px solid $grey80;
   border-radius: 3px;
 }
 
@@ -51,7 +51,7 @@
   padding-right: 15px;
   font-size: 12px;
   line-height: 12px;
-  background-color: #f2f2f2;
+  background-color: $grey95;
   transform: translateY(-7px);
 }
 
@@ -59,10 +59,10 @@
   margin-top: 0;
   font-size: 14px;
   line-height: 20px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   text-align: center;
-  color: #111111;
+  color: $almost-black;
 }
 
 .story__toggle {

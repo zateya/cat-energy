@@ -7,12 +7,16 @@
 .field-text__label {
   flex-shrink: 0;
   max-width: 50%;
-  margin-right: 10px;
+  margin-right: 15px;
   font-size: 16px;
   line-height: 18px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
-  color: #222222;
+  color: $nero;
+
+  &--contacts {
+    margin-right: 10px;
+  }
 }
 
 .field-text__input {
@@ -21,35 +25,71 @@
   padding: 13px 15px 12px;
   font-size: 16px;
   line-height: 18px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
-  color: #444444;
-  background-color: #ffffff;
-  border: 1px solid rgba(#cdcdcd, 0.5);
+  color: $grey-dark;
+  background-color: $white;
+  border: 1px solid rgba($grey80, 0.5);
+
+  &::placeholder {
+    color: $grey-dark;
+    opacity: 1;
+  }
 
   &:hover {
-    border-color: #cdcdcd;
+    border-color: $grey80;
   }
 
   &:focus {
-    border-color: #212735;
-    box-shadow: inset 0 0 0 1px #212735;
+    border-color: $dark-blue;
+    box-shadow: inset 0 0 0 1px $dark-blue;
     outline: none;
+  }
+
+  &--comment {
+    height: 150px;
+    padding-right: 10px;
+    resize: none;
+  }
+
+  &--invalid {
+    border-color: $coral-light;
+    box-shadow: inset 0 0 0 1px $coral-light;
   }
 }
 
-.field-text__input--invalid.field-text__input {
-  border-color: #ff8282;
-  box-shadow: inset 0 0 0 1px #ff8282;
+.field-text__input-wrapper {
+  position: relative;
+  width: 100%;
 }
 
-.field-text__input--comment.field-text__input {
-  height: 150px;
-  padding-right: 10px;
-  resize: none;
+.field-text__input-wrapper--icon .field-text__input {
+  padding-right: 47px;
 }
 
-.field-text__input::placeholder {
-  color: #444444;
-  opacity: 1;
+.field-text__icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: calc(100% - 33px);
+  transform: translateY(-50%);
+  fill: $nero;
+
+  &--email {
+    width: 17px;
+    height: 13px;
+  }
+
+  &--phone {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.field-text__input:focus ~ .field-text__icon {
+  fill: $green;
+}
+
+.field-text__input--invalid ~ .field-text__icon {
+  fill: $coral-light;
 }

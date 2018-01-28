@@ -1,3 +1,7 @@
+.main-nav {
+  background-color: $white;
+}
+
 .main-nav__items {
   margin: 0;
   padding: 0;
@@ -5,36 +9,28 @@
   text-align: center;
 }
 
-.main-nav--closed .main-nav__items {
-  display: none;
-}
-
-.main-nav--opened .main-nav__items {
-  display: block;
-}
-
 .main-nav__item {
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
 .main-nav__item-link {
   display: block;
   padding: 23px 20px;
-  color: #111111;
+  color: $almost-black;
   text-decoration: none;
-  box-shadow: inset 0 1px 0 #e6e6e6;
-}
+  box-shadow: inset 0 1px 0 $grey91;
 
-.main-nav__item-link[href]:hover {
-  opacity: 0.6;
-}
+  &[href]:hover {
+    opacity: 0.6;
+  }
 
-.main-nav__item-link[href]:active {
-  opacity: 0.3;
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__toggle {
@@ -53,10 +49,10 @@
   user-select: none;
   text-indent: -1000px;
   overflow: hidden;
-}
 
-.main-nav__toggle--hidden {
-  display: none;
+  &--hidden {
+    display: none;
+  }
 }
 
 .main-nav__toggle-bar {
@@ -65,38 +61,46 @@
   vertical-align: bottom;
   width: 24px;
   height: 2px;
-  background-color: #222222;
-}
+  background-color: $nero;
 
-.main-nav__toggle-bar::before,
-.main-nav__toggle-bar::after {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #222222;
-}
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $nero;
+  }
 
-.main-nav__toggle-bar::before {
-  top: 8px;
-}
+  &::before {
+    top: 8px;
+  }
 
-.main-nav__toggle-bar::after {
-  top: -8px;
+  &::after {
+    top: -8px;
+  }
 }
 
 .main-nav--opened .main-nav__toggle-bar {
   background-color: transparent;
+
+  &::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
 }
 
-.main-nav--opened .main-nav__toggle-bar::before {
-  top: 0;
-  transform: rotate(45deg);
+.main-nav--closed .main-nav__items {
+  display: none;
 }
 
-.main-nav--opened .main-nav__toggle-bar::after {
-  top: 0;
-  transform: rotate(-45deg);
+.main-nav--opened .main-nav__items {
+  display: block;
 }

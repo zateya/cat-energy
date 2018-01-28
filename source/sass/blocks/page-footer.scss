@@ -1,5 +1,5 @@
 .page-footer {
-  background-color: #f2f2f2;
+  background-color: $grey95;
 }
 
 .page-footer__info {
@@ -20,12 +20,12 @@
 .page-footer__logo {
   display: block;
   width: 128px;
-  height: 24px;
+  height: 23px;
 }
 
 .page-footer__social-block {
   margin-bottom: 22px;
-  border: 1px solid rgba(#000000, 0.1);
+  border: 1px solid rgba($black, 0.1);
   border-width: 1px 0;
 }
 
@@ -38,10 +38,10 @@
   font-size: 16px;
   line-height: 16px;
   color: inherit;
-}
 
-.page-footer__copy-link:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__copy-logo {
@@ -49,10 +49,10 @@
   width: 27px;
   height: 34px;
   margin-left: 23px;
-  fill: #444444;
+  fill: $grey40;
 }
 
 .page-footer__copy-link:hover .page-footer__copy-logo,
 .page-footer__copy-link:focus .page-footer__copy-logo {
-  fill: #68b738;
+  fill: $green;
 }
