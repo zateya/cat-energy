@@ -49,6 +49,7 @@
   user-select: none;
   text-indent: -1000px;
   overflow: hidden;
+  z-index: 10;
 
   &--hidden {
     display: none;
