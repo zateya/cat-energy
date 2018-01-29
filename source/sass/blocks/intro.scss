@@ -1,0 +1,38 @@
+.intro {
+  margin-bottom: 22px;
+  text-align: center;
+  color: $white;
+  background-color: $green-darker;
+  background-image: linear-gradient(to top, $white 175px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom, center bottom 175px;
+}
+
+.intro__text-block {
+  position: relative;
+  min-height: 168px;
+  padding: 28px 0;
+}
+
+.intro .intro__title {
+  margin: 0;
+  margin-bottom: 22px;
+  color: inherit;
+}
+
+.intro .intro__lead {
+  margin: 0;
+  color: inherit;
+}
+
+.intro__img {
+  position: relative;
+  display: block;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro__link-block {
+  margin-top: 3px;
+}

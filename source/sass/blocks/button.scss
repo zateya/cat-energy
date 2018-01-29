@@ -1,0 +1,44 @@
+.button {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  padding: 10px 22px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $green;
+  border: 0;
+
+  &:hover,
+  &:focus {
+    background-color: $green-darker;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
+}
+
+.button--long-text.button {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 11px 22px;
+}
+
+.button--info.button {
+  color: $grey-dark;
+  background-color: $grey95;
+
+  &:hover,
+  &:focus {
+    background-color: $grey92;
+  }
+
+  &:active {
+    color: rgba($grey-dark, 0.3);
+  }
+}

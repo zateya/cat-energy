@@ -1,0 +1,18 @@
+.extra-products__list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 1px;
+  list-style: none;
+}
+
+.extra-products__subtitle + .extra-products__list {
+  margin-top: 34px;
+}
+
+.extra-products__item {
+  padding: 13px 0 17px;
+  border: solid $grey80;
+  border-width: 1px 0;
+  margin-top: -1px;
+}

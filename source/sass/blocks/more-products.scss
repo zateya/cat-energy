@@ -1,0 +1,44 @@
+.more-products {
+  position: relative;
+  padding-top: 80px;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 26px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    background-image: url("../img/icon-plus-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2;
+  }
+}
+
+.more-products__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $almost-black;
+}
+
+.more-products__lead {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.more-products__title + .more-products__lead {
+  margin-top: 8px;
+}
+
+.more-products__link {
+  margin-top: 20px;
+}

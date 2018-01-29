@@ -1,0 +1,36 @@
+.page-header__layout {
+  position: relative;
+  border-bottom: 1px solid $grey91;
+}
+
+.page-header__logo-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  padding-right: 54px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.page-header__logo-link {
+  padding-top: 1px;
+  padding-bottom: 6px;
+}
+
+.page-header__logo {
+  display: block;
+  width: 34px;
+  height: 38px;
+}
+
+.page-header__logo-sign-link {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 14px;
+  padding-bottom: 13px;
+}
+
+.page-header__logo-sign {
+  display: block;
+}

@@ -1,0 +1,50 @@
+.form__block {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &--cat {
+    margin-top: 0;
+  }
+
+  &--program {
+    margin-top: 23px;
+    box-shadow: inset 0 0 0 1px $grey93;
+  }
+}
+
+.form__row + .form__row {
+  margin-top: 14px;
+}
+
+.form__radio-fields {
+  padding: 16px 0;
+}
+
+.form__block-subtitle {
+  margin: 0;
+}
+
+.form__block-subtitle + .form__text-fields {
+  margin-top: 32px;
+}
+
+.form__block-subtitle + .form__checkbox-fields {
+  margin-top: 29px;
+}
+
+.form__submit-block {
+  margin-top: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 31px;
+}
+
+.form__submit-note {
+  display: block;
+  margin-top: 22px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}

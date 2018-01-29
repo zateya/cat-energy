@@ -1,0 +1,55 @@
+.contacts--index {
+  background-color: $white;
+}
+
+.contacts__layout {
+  display: flex;
+  flex-direction: row;
+  padding: 27px 0;
+}
+
+.contacts__title-block {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.contacts__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $almost-black;
+}
+
+.contacts__info-block {
+  width: 50%;
+}
+
+.contacts__address {
+  font-style: normal;
+  line-height: 20px;
+}
+
+.contacts__map-wrapper {
+  position: relative;
+  height: 362px;
+  background-color: $grey95;
+}
+
+.contacts__map-img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contacts__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

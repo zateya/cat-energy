@@ -1,0 +1,55 @@
+.features {
+  padding-top: 29px;
+  padding-bottom: 22px;
+}
+
+.features__title {
+  margin: 40px 0;
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features__item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &::before {
+    content: "";
+    position: static;
+    display: block;
+    flex-shrink: 0;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background-color: $green;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--health::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--form::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--food::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--profit::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+}

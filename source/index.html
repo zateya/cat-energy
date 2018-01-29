@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page">
 
@@ -10,14 +12,14 @@
       <div class="page-header__layout">
         <div class="page-header__logo-block">
           <a class="page-header__logo-link">
-            <img class="page-header__logo" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип Cat Energy">
+            <img class="page-header__logo" src="img/icon-logo-mobile.svg" width="34" height="38" alt="Логотип Cat Energy">
           </a>
           <a class="page-header__logo-sign-link">
-            <img class="page-header__logo-sign" src="http://placehold.it/101x18" width="101" height="18" alt="Cat Energy">
+            <img class="page-header__logo-sign" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
           </a>
         </div>
         <nav class="main-nav">
-          <button class="main-nav__toggle main-nav__toggle--opened" type="button">Меню</button>
+          <button class="main-nav__toggle main-nav__toggle--hidden" type="button"><span class="main-nav__toggle-bar">Меню</span></button>
           <ul class="main-nav__items">
             <li class="main-nav__item">
               <a class="main-nav__item-link">Главная</a>
@@ -31,106 +33,104 @@
           </ul>
         </nav>
       </div>
+
+      <section class="page-header__intro intro">
+        <div class="intro__container container">
+          <div class="intro__text-block">
+            <h1 class="intro__title title">Функциональное питание для котов</h1>
+            <p class="intro__lead lead">Занялся собой? Займись котом!</p>
+          </div>
+          <img class="intro__img" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Корм для кошек Cat Energy Pro">
+          <div class="intro__link-block">
+            <a class="intro__link button button--long-text" href="#">Подобрать программу</a>
+          </div>
+        </div>
+      </section>
     </header>
 
-    <main class="page-main">
-
-      <section class="intro">
-        <div class="intro__container container">
-          <h1 class="intro__title">Функциональное питание для котов</h1>
-          <p class="intro__lead">Занялся собой? Займись котом!</p>
-          <img class="intro__img" src="http://placehold.it/280x270" width="280" height="270" alt="Корм для кошек Cat Energy Pro">
-          <a class="intro__program-link button" href="#">Подобрать программу</a>
+    <main class="page-main  page-main--index">
+      <section class="programs">
+        <h2 class="visually-hidden">Программы питания</h2>
+        <div class="programs__container container">
+          <div class="programs__layout">
+            <div class="programs__item programs__item--weight-loss">
+              <h3 class="programs__item-title">Похудение</h3>
+              <p class="programs__item-desc">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+                Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+              <div class="programs__item-link-block">
+                <a class="programs__item-link" href="#">Каталог Slim</a>
+              </div>
+            </div>
+            <div class="programs__item programs__item--weight-add">
+              <h3 class="programs__item-title">Набор массы</h3>
+              <p class="programs__item-desc">Заработать авторитет среди дворовых котов и даже собак?
+                Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+              <div class="programs__item-link-block">
+                <a class="programs__item-link" href="#">Каталог Pro</a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-        <section class="choice">
-          <h2 class="choice__title visually-hidden">Выбор каталога</h2>
-          <div class="choice__container container">
-            <div class="choice__layout">
-              <div class="choice__item choice__item--weight-loss">
-                <h3 class="choice__item-title">Похудение</h3>
-                <p class="choice__item-desc">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
-                  Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-                <a class="choice__item-link" href="#">Каталог Slim</a>
-              </div>
-              <div class="choice__item choice__item--weight-add">
-                <h3 class="choice__item-title">Набор массы</h3>
-                <p class="choice__item-desc">Заработать авторитет среди дворовых котов и даже собак?
-                  Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-                <a class="choice__item-link" href="#">Каталог Pro</a>
-              </div>
+      <section class="features">
+        <div class="features__container container">
+          <h2 class="features__title  title">Как это работает</h2>
+          <ul class="features__list">
+            <li class="features__item features__item--health">Функциональное питание содержит только полезные питательные вещества.</li>
+            <li class="features__item features__item--form">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
+            <li class="features__item features__item--food">Замените один-два приема обычной еды на наше фунцкциональное питание.</li>
+            <li class="features__item features__item--profit">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="story">
+        <div class="story__container container">
+          <h2 class="story__title  title">Живой пример</h2>
+          <p class="story__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <div class="story__stats">
+            <div class="story__stats-item">
+              <div class="story__stats-value">5 кг</div>
+              <div class="story__stats-mark">снижение веса</div>
+            </div>
+            <div class="story__stats-item">
+              <div class="story__stats-value">60 дней</div>
+              <div class="story__stats-mark">затрачено времени</div>
             </div>
           </div>
-        </section>
+          <p class="story__costs">Затраты на питание: 15&nbsp;000&nbsp;руб.</p>
+        </div>
 
-        <section class="features">
-          <div class="features__container container">
-            <h2 class="features__title">Как это работает</h2>
-            <ul class="features__list">
-              <li class="features__item features__item--health">Функциональное питание содержит только полезные питательные вещества.</li>
-              <li class="features__item features__item--form">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-              <li class="features__item features__item--food">Замените один-два приема обычной еды на наше фунцкциональное питание.</li>
-              <li class="features__item features__item--profit">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
-            </ul>
-          </div>
-        </section>
+        <div class="story__toggle toggle">
+          <input class="toggle__input" type="checkbox" id="story-toggle-input" name="story-toggle-input">
+          <label class="toggle__label toggle__label--before" for="story-toggle-input">Было</label>
+          <label class="toggle__control" for="story-toggle-input"></label>
+          <label class="toggle__label toggle__label--after" for="story-toggle-input">Стало</label>
 
-        <section class="story">
-          <div class="story__container container">
-
-            <h2 class="story__title">Живой пример</h2>
-            <p class="story__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-            <div class="story__stats">
-              <div class="story__stats-item">
-                <div class="story__stats-value">5 кг</div>
-                <div class="story__stats-mark">снижение веса</div>
-              </div>
-              <div class="story__stats-item">
-                <div class="story__stats-value">60 дней</div>
-                <div class="story__stats-mark">затрачено времени</div>
-              </div>
-            </div>
-            <p class="story__costs">Затраты на питание: 15&nbsp;000&nbsp;руб.</p>
-
-            <div class="story__toggle slide-toggle">
-              <div class="slide-toggle__slides">
-                <div class="slide-toggle__slide slide-toggle__slide--active">
-                  <h3 class="slide-toggle__slide-title visually-hidden">До</h3>
-                  <img class="slide-toggle__slide-img" src="http://placehold.it/251x240" width="251" height="240" alt="До">
-                </div>
-                <div class="slide-toggle__slide">
-                  <h3 class="slide-toggle__slide-title visually-hidden">После</h3>
-                  <img class="slide-toggle__slide-img" src="http://placehold.it/251x240" width="251" height="240" alt="После">
-                </div>
-              </div>
-              <div class="slide-toggle__toggle toggle">
-                <input class="toggle__input" type="checkbox" id="story-toggle-input" name="story-toggle-input">
-                <label class="toggle__label" for="story-toggle-input">Показать результат</label>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
+          <img class="toggle__img toggle__img--off" src="img/before-mobile@1x.png" width="320" height="240" alt="До">
+          <img class="toggle__img toggle__img--on" src="img/after-mobile@1x.png" width="320" height="240" alt="После">
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
 
-      <section class="page-footer__contacts contacts">
+      <section class="page-footer__contacts contacts contacts--index">
         <div class="contacts__container container">
           <div class="contacts__layout">
             <div class="contacts__title-block">
-              <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+              <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
             </div>
             <div class="contacts__info-block">
               <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
             </div>
           </div>
         </div>
-        <div class="contacts__map">
-          <img class="contacts__map-img" src="http://placehold.it/768x361" width="768" height="361" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        <div class="contacts__map-wrapper">
+          <img class="contacts__map-img" src="img/map.png" width="320" height="362" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          <div class="contacts__map" id="map">Схема проезда</div>
         </div>
       </section>
 
@@ -139,26 +139,47 @@
           <div class="page-footer__layout">
             <div class="page-footer__logo-block">
               <a class="page-footer__logo-link">
-                <img class="page-footer__logo" src="http://placehold.it/128x24" width="128" height="24" alt="Cat Energy">
+                <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="23" alt="Cat Energy">
               </a>
             </div>
             <div class="page-footer__social-block">
               <ul class="page-footer__social social">
                 <li class="social__item">
-                  <a class="social__item-link social__item-link--vk" href="https://vk.com/htmlacademy" target="_blank">вКонтакте</a>
+                  <a class="social__item-link" href="https://vk.com/htmlacademy" target="_blank">
+                    <svg class="social__item-icon social__item-icon--vk" width="22" height="12" viewBox="0 0 22 12">
+                      <title>вКонтакте</title>
+                      <path d="M17.6 12c-.3 0-.9-.1-1.5-.5-.5-.3-.9-.7-1.3-1.2-.3-.3-.9-.9-1.1-.9-.2.1-.4.7-.3 1.2 0 .1 0 .6-.3.9-.3.3-.8.4-.9.4h-1.4c-.7 0-3.2-.2-5.4-2.3C2.5 7.1.2 2.2.1 2 0 1.6-.1 1.2.2.9c.3-.3.8-.4 1-.4h3.1c.1 0 .4.1.7.3.3.2.4.5.5.6 0 0 .5 1.1 1.1 2 1 1.5 1.4 1.9 1.5 2 .1-.4.2-1.4.1-2.3 0-.4-.1-.8-.2-1-.1-.1-.3-.2-.5-.2l-.6-.5c0-.5.5-.9.9-1.1.5-.2 1.3-.3 2.3-.3h.5c.9 0 1.2.1 1.6.1 1.2.3 1.2 1.3 1.1 2.5v1.6c0 .3 0 .8.1 1 .2-.1.6-.5 1.5-1.9.6-.9 1-1.9 1.1-2.1.1-.3.4-.7 1.2-.7h3.4c.7 0 1.2.2 1.3.7.2.5.1 1.3-1.7 3.5-.3.3-.5.6-.7.9-.5.4-.9 1-.9 1.1 0 .1.5.5.9.9 1.1.9 1.9 1.7 2.2 2.3.4.6.3 1 .2 1.3-.3.7-1.2.7-1.4.8h-2.8-.1zm-3.9-3.7c.7 0 1.2.6 1.8 1.2.4.4.7.8 1.1 1 .5.3 1 .3 1 .3h2.9c.1 0 .3-.1.4-.1 0 0 0-.1-.1-.1-.3-.5-1-1.3-2-2.1-.9-.7-1.3-1.1-1.4-1.7 0-.6.4-1.1 1.2-2.1.2-.2.4-.5.7-.8 1.1-1.4 1.4-2 1.5-2.3H16.9c0 .4-.5 1.5-1.1 2.4-1.4 2.1-2 2.4-2.5 2.4-.1 0-.3 0-.4-.1-.7-.4-.7-1.4-.7-2.1v-.3-1.3c.1-1.3 0-1.3-.3-1.4-.3-.1-.5-.1-1.4-.1H10c-.5 0-1 0-1.4.1l.2.2c.4.5.4 1.5.4 1.7.1 1.3 0 2.9-.7 3.3-.1 0-.2.1-.4.1-.6 0-1.3-.7-2.5-2.5C5 2.9 4.5 1.8 4.5 1.8s0-.1-.1-.1-.2-.1-.2-.1H1.3h-.1c.4.9 2.5 5 4.8 7.2 2 1.9 4.3 2 4.7 2h1.4s.2 0 .2-.1v-.1c0-.2 0-2 1.2-2.3h.2z"/>
+                    </svg>
+                  </a>
                 </li>
                 <li class="social__item">
-                  <a class="social__item-link social__item-link--inst" href="https://www.instagram.com/htmlacademy/" target="_blank">Instagram</a>
+                  <a class="social__item-link" href="https://www.instagram.com/htmlacademy/" target="_blank">
+                    <svg class="social__item-icon social__item-icon--inst" width="16" height="16" viewBox="0 0 16 16">
+                      <title>Instagram</title>
+                      <path d="M11.8 1C13.6 1 15 2.4 15 4.2v7.7c0 1.7-1.4 3.1-3.1 3.1H4.2C2.4 15 1 13.6 1 11.8V4.2C1 2.4 2.4 1 4.2 1h7.6m0-1H4.2C1.9 0 0 1.9 0 4.2v7.7C0 14.1 1.9 16 4.2 16h7.7c2.3 0 4.2-1.9 4.2-4.2V4.2C16 1.9 14.1 0 11.8 0z"/>
+                      <path d="M8 4.9c1.7 0 3.1 1.4 3.1 3.1 0 1.7-1.4 3.1-3.1 3.1-1.7 0-3.1-1.4-3.1-3.1 0-1.7 1.4-3.1 3.1-3.1m0-1C5.7 3.9 3.9 5.7 3.9 8s1.8 4.1 4.1 4.1 4.1-1.8 4.1-4.1S10.3 3.9 8 3.9z"/>
+                      <circle cx="12.3" cy="3.7" r=".9"/>
+                    </svg>
+                  </a>
                 </li>
                 <li class="social__item">
-                  <a class="social__item-link social__item-link--fb" href="https://www.facebook.com/htmlacademy" target="_blank">Facebook</a>
+                  <a class="social__item-link" href="https://www.facebook.com/htmlacademy" target="_blank">
+                    <svg class="social__item-icon social__item-icon--fb" width="10" height="19" viewBox="0 0 10 19">
+                      <title>Facebook</title>
+                      <path d="M7.1 19H2v-8.8H0V5.8h1.9c-.1-2 .2-3.4 1.1-4.4C3.8.5 5 .1 6.5 0H10v4.2H7.2c-.1.2-.2.8-.2 1.6h3v4.4H7.1V19zm-4-1h2.8V9.1h2.9V6.8H5.9v-.5c0-1.4 0-2.6.7-3.1l.1-.1h2.1V1H6.5c-1.2.1-2 .4-2.6 1-.8.8-1 2.3-.8 4.2l.1.6H1.1v2.3h2V18z"/>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </div>
             <div class="page-footer__copy-block">
               <a class="page-footer__copy-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
                 <span class="page-footer__copy-sign">HTML Academy</span>
-                <img class="page-footer__copy-logo" src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy">
+
+                <svg class="page-footer__copy-logo" width="27" height="34" viewBox="0 0 27 34">
+                  <title>HTML Academy</title>
+                  <path d="M13.62.017L13.472 0 0 1.412v24.661l13.472 8.017 13.43-7.99.042-.026V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.547-1.212 11.547 1.212v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.013 1.415 5.904 3.513-.86.507-5.031-2.992-.013 1.415 3.827 2.275-.782.523-3.032-1.787-.013 1.413 1.852 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.015 1.044-7.941-4.728-.015 1.416 7.979 4.796.017 1.076-7.972-4.741-.013 1.415 8.021 4.821.045.026 8.143-4.872v-1.268l-.011-.148v-3.761l3.415-2.036v10.02L13.472 31.85 1.925 24.979v-9.852z"/>
+                </svg>
               </a>
             </div>
           </div>
@@ -167,5 +188,7 @@
 
     </footer>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

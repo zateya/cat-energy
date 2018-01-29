@@ -1,0 +1,32 @@
+.subtitle {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $almost-black;
+
+  &::after {
+    content: "";
+    position: static;
+    display: block;
+    flex-grow: 1;
+    min-width: 20px;
+    height: 3px;
+    margin-top: 15px;
+    margin-left: 4px;
+    background-color: $green;
+    transform: translateX(20px);
+    order: 1;
+  }
+}
+
+.subtitle__comment {
+  display: block;
+  width: 100%;
+  order: 2;
+}
