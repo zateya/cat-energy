@@ -1,16 +1,30 @@
-.page-main__title-container {
+.page-main {
   padding-top: 27px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--index {
+    max-width: inherit;
+    padding-top: 0;
+    margin: 0;
+  }
 }
 
-.page-main__title-lead {
-  margin-top: 38px;
+.page-main__title {
+  margin-top: 0;
+  margin-bottom: 38px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.page-main__title-container + .page-main__container {
-  margin-top: 38px;
+.page-main__lead {
+  margin-bottom: 38px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.page-main__title-container + .page-main__catalog {
+.page-main__title + .page-main__catalog {
   margin-top: 41px;
 }
 

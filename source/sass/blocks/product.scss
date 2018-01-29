@@ -4,7 +4,7 @@
 }
 
 .product__img-block {
-  width: 50%;
+  width: 140px;
 }
 
 .product__img {
@@ -14,7 +14,7 @@
 }
 
 .product__info-block {
-  width: 50%;
+  flex-grow: 1;
   padding: 21px 0;
 }
 
