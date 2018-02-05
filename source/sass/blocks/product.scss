@@ -1,21 +1,64 @@
+.product {
+  width: 100%;
+
+  @media (min-width: $tablets) {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, $white, $white 82px, $grey95 82px, $grey95);
+  }
+}
+
 .product__layout {
   display: flex;
   flex-direction: row;
+
+  @media (min-width: $tablets) {
+    flex-direction: column;
+  }
 }
 
 .product__img-block {
+  flex-shrink: 0;
   width: 140px;
+
+  @media (min-width: $tablets) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 208px;
+  }
 }
 
 .product__img {
   display: block;
   width: 140px;
   height: 144px;
+
+  &--small {
+    @media (min-width: $tablets) {
+      width: 161px;
+      height: 172px;
+    }
+  }
+
+  &--large {
+    @media (min-width: $tablets) {
+      width: 195px;
+      height: 208px;
+    }
+  }
 }
 
 .product__info-block {
   flex-grow: 1;
   padding: 21px 0;
+
+  @media (min-width: $tablets) {
+    padding: 38px 38px 20px;
+  }
 }
 
 .product__title {
@@ -27,10 +70,21 @@
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: $almost-black;
+
+  @media (min-width: $tablets) {
+    margin-bottom: 18px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
 }
 
 .product__subtitle {
   display: block;
+
+  @media (min-width: $tablets) {
+    display: inline;
+  }
 }
 
 .product__info {
@@ -39,11 +93,20 @@
   list-style: none;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: $tablets) {
+    font-size: 16px;
+  }
 }
 
 .product__info-item {
   display: flex;
   flex-direction: row;
+
+  @media (min-width: $tablets) {
+    padding: 8px 0;
+    box-shadow: inset 0 -1px $grey80;
+  }
 }
 
 .product__info-category {
@@ -56,5 +119,18 @@
 
   &--price {
     text-transform: uppercase;
+  }
+}
+
+.product__weight {
+  @media (min-width: $tablets) {
+    display: block;
+  }
+}
+
+.product__link-block {
+  @media (min-width: $tablets) {
+    margin-top: auto;
+    padding: 0 38px 40px;
   }
 }

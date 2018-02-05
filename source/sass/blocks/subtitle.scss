@@ -1,32 +1,54 @@
 .subtitle {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0;
+  padding-right: $phones-paddings;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
   font-family: "Oswald", "Arial", sans-serif;
   color: $almost-black;
+  background-color: $white;
 
-  &::after {
-    content: "";
-    position: static;
-    display: block;
-    flex-grow: 1;
-    min-width: 20px;
-    height: 3px;
-    margin-top: 15px;
-    margin-left: 4px;
-    background-color: $green;
-    transform: translateX(20px);
-    order: 1;
+  @media (min-width: $tablets) {
+    padding-right: 37px;
+    padding-left: 37px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-left: 0;
   }
 }
 
-.subtitle__comment {
+.subtitle::before,
+.subtitle::after {
+  content: "";
+  position: absolute;
   display: block;
-  width: 100%;
-  order: 2;
+  top: 0;
+  width: 100vw;
+  height: 3px;
+  margin-top: calc(1em / 2 + 3px);
+  background-color: $green;
+  z-index: -1;
+}
+
+.subtitle::before {
+  display: none;
+
+  @media (min-width: $tablets) {
+    display: block;
+    right: 100%;
+  }
+
+  @media (min-width: $desktops) {
+    margin-right: 37px;
+  }
+}
+
+.subtitle::after {
+  left: 0;
 }

@@ -13,6 +13,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (min-width: $tablets) {
+    width: auto;
+    margin: 0;
+  }
 }
 
 .promo__title {

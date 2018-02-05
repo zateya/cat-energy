@@ -4,10 +4,57 @@
   padding: 0;
   padding-top: 1px;
   list-style: none;
+
+  @media (min-width: $tablets) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  @media (min-width: $desktops) {
+    justify-content: flex-start;
+  }
 }
 
 .catalog__item {
   padding: 0 20px 24px;
   border: 1px solid $grey93;
   margin-top: -1px;
+
+  @media (min-width: $tablets) {
+    display: flex;
+    flex-direction: row;
+    width: calc(50% - 30px);
+    min-height: 513px;
+    margin-top: 58px;
+    padding: 0;
+    border: 0;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+
+    &--more {
+      padding-top: 84px;
+    }
+  }
+
+  @media (min-width: $desktops) {
+    width: calc((100% - 80px * 3) / 4);
+    min-height: 514px;
+    margin-top: 60px;
+    margin-right: 80px;
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-top: 0;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
 }

@@ -1,6 +1,18 @@
 .features {
   padding-top: 29px;
   padding-bottom: 22px;
+
+  @media (min-width: $tablets) {
+    max-width: 100%;
+    padding-top: 45px;
+    padding-bottom: 0;
+    box-shadow: inset 0 -1px #e6e6e6;
+  }
+
+  @media (min-width: $desktops) {
+    padding-top: 72px;
+    box-shadow: none;
+  }
 }
 
 .features__title {
@@ -8,11 +20,21 @@
 }
 
 .features__list {
-  display: flex;
-  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
+  counter-reset: item_number;
+
+  @media (min-width: $tablets) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktops) {
+    justify-content: flex-start;
+  }
 }
 
 .features__item {
@@ -21,6 +43,27 @@
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
+  counter-increment: item_number;
+
+  @media (min-width: $tablets) {
+    display: block;
+    width: calc(50% - 30px);
+    min-height: 265px;
+    margin-bottom: 0;
+    padding-top: 30px;
+    margin-bottom: 53px;
+    overflow: hidden;
+  }
+
+  @media (min-width: $desktops) {
+    width: calc((100% - 80px*3)/4);
+    margin-right: 80px;
+    margin-bottom: 0;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
 
   &::before {
     content: "";
@@ -35,6 +78,14 @@
     background-color: $green;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-width: $tablets) {
+      width: 80px;
+      height: 80px;
+      margin-top: 2px;
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
   }
 
   &--health::before {
@@ -51,5 +102,31 @@
 
   &--profit::before {
     background-image: url("../img/advantage-clock@1x.png");
+  }
+
+  &::after {
+    position: absolute;
+    display:none;
+    content: counter(item_number);
+    top: 15px;
+    left: 114px;
+    font-size: 281px;
+    line-height: 235px;
+    font-family: "Oswald", "Arial", sans-serif;
+    color: #f2f2f2;
+    z-index: -1;
+
+    @media (min-width: $tablets) {
+      display:block;
+    }
+  }
+}
+
+.features__item-text {
+  margin: 0;
+  width: 100%;
+
+  @media (min-width: $tablets) {
+    width: 245px;
   }
 }
