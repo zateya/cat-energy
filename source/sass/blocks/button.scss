@@ -24,12 +24,17 @@
 }
 
 .button--intro {
+  @media (min-width: $tablets) {
+    width: auto;
+  }
+}
+
+.button--large {
   padding: 11px 22px;
   font-size: 14px;
   line-height: 18px;
 
   @media (min-width: $tablets) {
-    width: auto;
     padding: 16px 27px;
     font-size: 20px;
     line-height: 20px;

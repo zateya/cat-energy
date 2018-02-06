@@ -4,6 +4,7 @@
 
   @media (min-width: $tablets) {
     padding-top: 58px;
+    margin-bottom: 56px;
   }
 
   @media (min-width: $desktops) {
@@ -13,10 +14,6 @@
 
 .page-main__title {
   margin: 0;
-}
-
-.page-main__lead {
-  margin-bottom: 38px;
 }
 
 .page-main__title-block + .page-main__catalog {

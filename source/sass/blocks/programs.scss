@@ -17,6 +17,10 @@
   padding-left: 20px;
   background-color: $grey95;
 
+  &:first-child {
+    margin-top: 0;
+  }
+
   @media (min-width: $tablets) {
     margin-top: 30px;
     padding-top: 77px;
@@ -31,14 +35,11 @@
     padding-top: 47px;
     padding-right: 50px;
     padding-bottom: 61px;
-  }
-}
 
-.programs__item:first-child {
-  margin-top: 0;
 
-  @media (min-width: $desktops) {
-    margin-top: 26px;
+    &:first-child {
+      margin-top: 26px;
+    }
   }
 }
 
@@ -79,14 +80,10 @@
 
   @media (min-width: $tablets) {
     right: 0;
-    transform: scale(4);
-    transform-origin: right top;
   }
 
   @media (min-width: $desktops) {
     right: auto;
-    transform: scale(2);
-    transform-origin: left top;
   }
 }
 
@@ -99,10 +96,14 @@
   background-size: 100% auto;
 
   @media (min-width: $tablets) {
+    width: 140px;
+    height: 196px;
     margin: 2px 92px 0 0;
   }
 
   @media (min-width: $desktops) {
+    width: 70px;
+    height: 98px;
     margin: -6px 0 0 14px;
   }
 }
@@ -116,14 +117,15 @@
   background-size: 100% auto;
 
   @media (min-width: $tablets) {
-    margin-top: 59px;
-    margin-right: 28px;
-    margin-left: 0;
+    width: 268px;
+    height: 112px;
+    margin: 58px 28px 0 0;
   }
 
   @media (min-width: $desktops) {
+    width: 134px;
+    height: 56px;
     margin-top: 22px;
-    margin-right: 0;
     margin-left: -18px;
   }
 }
