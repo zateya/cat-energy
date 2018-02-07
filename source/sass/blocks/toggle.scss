@@ -71,9 +71,9 @@
   z-index: 3;
 
   @media (min-width: $tablets) {
-    margin: 0;
-    padding: 14px 22px;
-    width: 472px;
+    padding: 14px 0;
+    margin: 0 22px;
+    width: 428px;
   }
 
   @media (min-width: $desktops) {
