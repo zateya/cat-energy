@@ -59,6 +59,10 @@
   background-clip: content-box;
 }
 
+.field-checkbox__input:focus ~ .field-checkbox__label::before {
+  border-color: $silver;
+}
+
 .field-checkbox__input:not(:disabled) ~ .field-checkbox__label:hover::before {
   border-color: $silver;
 }

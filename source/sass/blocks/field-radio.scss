@@ -52,6 +52,10 @@
   background-clip: content-box;
 }
 
+.field-radio__input:focus ~ .field-radio__label::before {
+  border-color: $silver;
+}
+
 .field-radio__input:not(:disabled) ~ .field-radio__label:hover::before {
   border-color: $silver;
 }

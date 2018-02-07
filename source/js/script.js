@@ -37,7 +37,7 @@
         url: "img/map-pin.png",
         size: new google.maps.Size(124, 106),
         origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(62, 106)
+        anchor: new google.maps.Point(62, 53)
       };
 
       var marker = new google.maps.Marker({

@@ -23,9 +23,12 @@
 
 .form__text-block {
   margin: 0 0 38px;
+  padding-left: $phones-paddings;
+  padding-right: $phones-paddings;
 
   @media (min-width: $tablets) {
     margin: 0 0 64px;
+    padding: 0;
   }
 
   @media (min-width: $desktops) {
@@ -35,15 +38,11 @@
 
 .form__lead {
   margin: 0;
-
-  @media (min-width: $tablets) {
-    width: 344px;
-  }
 }
 
 .form__block {
   position: relative;
-  margin-top: 30px;
+  margin-top: 27px;
   padding-left: 20px;
   padding-right: 20px;
 
@@ -140,6 +139,7 @@
   margin: 0;
 
   @media (min-width: $tablets) {
+    max-width: auto;
     margin-left: -40px;
     margin-right: -40px;
   }
@@ -147,6 +147,14 @@
   @media (min-width: $desktops) {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+.form__block-subtitle-comment {
+  display: block;
+
+  @media (min-width: $tablets) {
+    display: inline;
   }
 }
 
@@ -159,7 +167,7 @@
 }
 
 .form__text-fields--contacts {
-  @media (min-width: $tablets) {
+  @media (min-width: $desktops) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -167,8 +175,10 @@
 }
 
 .form__text-fields--contacts .form__row {
-  width: calc(50% - 40px);
-  margin-top: 0;
+  @media (min-width: $desktops) {
+    width: calc(50% - 40px);
+    margin-top: 0;
+  }
 }
 
 .form__checkbox-fields {

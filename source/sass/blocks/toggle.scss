@@ -5,12 +5,9 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding-top: 271px;
   padding-bottom: 36px;
-  text-align: center;
 
   @media (min-width: $tablets) {
-    padding-top: 551px;
     padding-bottom: 66px;
 
     &::before {
@@ -47,12 +44,12 @@
   text-transform: uppercase;
   color: $almost-black;
   user-select: none;
-  z-index: 2;
+  z-index: 3;
   cursor: pointer;
 
   @media (min-width: $tablets) {
     font-size: 20px;
-    padding: 7px 0;
+    padding: 7px 0 6px;
     border-bottom: 1px dotted rgba($black, 0.23);
 
     &:hover {
@@ -71,17 +68,17 @@
   display: block;
   width: 84px;
   margin: 3px 18px;
-  z-index: 2;
+  z-index: 3;
 
   @media (min-width: $tablets) {
-    flex-grow: 1;
     margin: 0;
-    padding: 14px 25px;
-    max-width: 478px;
+    padding: 14px 22px;
+    width: 472px;
+  }
 
-    &::before {
-      display: none;
-    }
+  @media (min-width: $desktops) {
+    flex-grow: 1;
+    width: auto;
   }
 }
 
@@ -150,34 +147,85 @@
   }
 }
 
-.toggle__item {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  user-select: none;
+.toggle__items {
+  order: -1;
+  width: 100%;
+  margin-bottom: 28px;
 
+  @media (min-width: $tablets) {
+    margin-bottom: 7px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100vw;
+      background-image: linear-gradient(to bottom, $white, $white 169px, $grey92-2 169px, $grey92-2);
+    }
+  }
+
+  @media (min-width: $desktops) {
+    margin-bottom: 0;
+
+    &::after {
+      background-image: linear-gradient(to bottom, $white, $white 190px, $grey92-2 190px, $grey92-2);
+    }
+  }
+}
+
+.toggle__item {
   &--on {
     display: none;
   }
 
   @media (min-width: $tablets) {
-    &--on {
-      display: block;
-    }
+    position: relative;
+    z-index: 1;
 
     &--off {
-      z-index: 1;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 50%;
+      overflow: hidden;
+      background-image: linear-gradient(to bottom, $white, $white 169px, $grey95 169px, $grey95);
+    }
+
+    &--on {
+      display: block;
+      margin-left: 25px;
+    }
+  }
+
+  @media (min-width: $desktops) {
+    &--off {
+      background-image: linear-gradient(to bottom, $white, $white 190px, $grey95 190px, $grey95);
+      width: calc(50% + 80px);
+      margin-left: -80px;
+    }
+
+    &--on {
+      margin-left: -80px;
     }
   }
 }
 
 .toggle__img {
+  position: relative;
+  display: block;
   width: 320px;
   height: 240px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: $tablets) {
     width: 708px;
     height: 517px;
+    margin: 0;
   }
 
   @media (min-width: $desktops) {
@@ -191,11 +239,11 @@
     left: calc(100% - 40px);
   }
 
-  .toggle__input:checked ~ .toggle__item--on {
+  .toggle__input:checked ~ .toggle__items .toggle__item--on {
     display: block;
   }
 
-  .toggle__input:checked ~ .toggle__item--off {
+  .toggle__input:checked ~ .toggle__items .toggle__item--off {
     display: none;
   }
 }
