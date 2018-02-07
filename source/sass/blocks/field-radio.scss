@@ -15,6 +15,14 @@
   color: $nero;
   user-select: none;
 
+  @media (min-width: $tablets) {
+    padding-top: 16px;
+    padding-left: 60px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
   &:active {
     opacity: 0.3;
   }
@@ -28,14 +36,24 @@
     width: 30px;
     height: 30px;
     padding: 8px;
-    border: 1px solid $grey93;
+    border: 1px solid $grey80;
     border-radius: 50%;
+
+    @media (min-width: $tablets) {
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+    }
   }
 }
 
 .field-radio__input:checked ~ .field-radio__label::before {
   background-color: $green;
   background-clip: content-box;
+}
+
+.field-radio__input:focus ~ .field-radio__label::before {
+  border-color: $silver;
 }
 
 .field-radio__input:not(:disabled) ~ .field-radio__label:hover::before {

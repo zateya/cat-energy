@@ -1,7 +1,13 @@
 .title {
+  margin: 0;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
   font-family: "Oswald", "Arial", sans-serif;
   color: $almost-black;
+
+  @media (min-width: $tablets) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

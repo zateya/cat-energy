@@ -12,7 +12,11 @@
       <div class="page-header__layout">
         <div class="page-header__logo-block">
           <a class="page-header__logo-link" href="index.html">
-            <img class="page-header__logo" src="img/icon-logo-mobile.svg" width="34" height="38" alt="Логотип Cat Energy">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.png">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.png">
+              <img class="page-header__logo" src="img/icon-logo-mobile.svg" alt="Логотип Cat Energy">
+            </picture>
           </a>
           <a class="page-header__logo-sign-link" href="index.html">
             <img class="page-header__logo-sign" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat Energy">
@@ -28,135 +32,151 @@
               <a class="main-nav__item-link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__item-link">Подбор программы</a>
+              <a class="main-nav__item-link main-nav__item-link--active">Подбор программы</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main class="page-main">
-      <h1 class="page-main__title title">Подбор программы</h1>
-      <p class="page-main__lead lead">Заполните анкету и мы подберем программу&nbsp;питания для вашего кота</p>
-      <form class="form" action="https://echo.htmlacademy.ru" method="post">
-
-        <div class="form__block  form__block--cat">
-          <h2 class="visually-hidden">Данные кота</h2>
-          <div class="form__text-fields">
-            <div class="form__row field-text">
-              <label class="field-text__label" for="cat-name">Имя:*</label>
-              <input class="field-text__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
-            </div>
-            <div class="form__row field-text">
-              <label class="field-text__label" for="cat-weight">Вес (кг):*</label>
-              <input class="field-text__input" type="text" name="cat-weight" id="cat-weight" placeholder="7" required>
-            </div>
-            <div class="form__row field-text">
-              <label class="field-text__label" for="cat-age">Возраст (лет):</label>
-              <input class="field-text__input" type="text" name="cat-age" id="cat-age" placeholder="7">
-            </div>
-          </div>
+    <main class="page-main page-main--inner">
+      <div class="page-main__container container">
+        <div class="page-main__title-block">
+          <h1 class="page-main__title title">Подбор программы</h1>
         </div>
-
-        <div class="form__block form__block--program">
-          <h2 class="visually-hidden">Выбор программы</h2>
-          <div class="form__radio-fields">
-            <div class="field-radio">
-              <input class="field-radio__input" type="radio" name="program" value="weight-loss" id="weight-loss" checked>
-              <label class="field-radio__label" for="weight-loss">Похудение</label>
-            </div>
-            <div class="field-radio">
-              <input class="field-radio__input" type="radio" name="program" value="weight-add" id="weight-add">
-              <label class="field-radio__label" for="weight-add">Набор массы</label>
-            </div>
-            <div class="field-radio">
-              <input class="field-radio__input" type="radio" name="program" value="need-advice" id="need-advice">
-              <label class="field-radio__label" for="need-advice">Не знаю (нужен ваш совет)</label>
-            </div>
+        <form class="page-main__form form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form__text-block">
+            <p class="form__lead lead">Заполните анкету и мы подберем<br>программу питания для вашего кота</p>
           </div>
-        </div>
 
-        <div class="form__block">
-          <h2 class="form__block-subtitle subtitle">Контактные данные <span class="subtitle__comment">(владельца кота)</span></h2>
-          <div class="form__text-fields">
-            <div class="form__row field-text">
-              <label class="field-text__label field-text__label--contacts" for="owner-email">E-mail:*</label>
-              <div class="field-text__input-wrapper  field-text__input-wrapper--icon">
-                <input class="field-text__input" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
-
-                <svg class="field-text__icon field-text__icon--email" viewBox="0 0 17 13" width="17" height="13">
-                  <path d="M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z"/>
-                </svg>
+          <div class="form__block  form__block--cat">
+            <h2 class="visually-hidden">Данные кота</h2>
+            <div class="form__text-fields">
+              <div class="form__row field-text">
+                <label class="field-text__label" for="cat-name">Имя:*</label>
+                <input class="field-text__input" type="text" name="cat-name" id="cat-name" placeholder="Барсик" required>
               </div>
-            </div>
-            <div class="form__row field-text">
-              <label class="field-text__label field-text__label--contacts" for="owner-phone">Телефон:*</label>
-              <div class="field-text__input-wrapper  field-text__input-wrapper--icon">
-                <input class="field-text__input" type="text" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
-
-                <svg class="field-text__icon  field-text__icon--phone" viewBox="0 0 20 20" width="20" height="20">
-                  <path d="M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zM8.1 19.4v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8H6.8v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1C1.5-.1.1 1.2 0 2.9V16.8c-.1 1.7 1.2 3.1 2.9 3.1H7.5c.3.1.6-.2.6-.5z"/>
-                </svg>
+              <div class="form__row field-text">
+                <label class="field-text__label" for="cat-weight">Вес (кг):*</label>
+                <input class="field-text__input" type="text" name="cat-weight" id="cat-weight" placeholder="7" required>
+              </div>
+              <div class="form__row field-text">
+                <label class="field-text__label" for="cat-age">Возраст (лет):</label>
+                <input class="field-text__input" type="text" name="cat-age" id="cat-age" placeholder="7">
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="form__block">
-          <h2 class="form__block-subtitle subtitle">Комментарий</h2>
-          <div class="form__text-fields">
-            <div class="field-text">
-              <label class="field-text__label visually-hidden" for="owner-comment">Введите комментарий</label>
-              <textarea class="field-text__input field-text__input--comment" name="owner-comment" id="owner-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <div class="form__block form__block--program">
+            <h2 class="visually-hidden">Выбор программы</h2>
+            <div class="form__radio-fields">
+              <div class="field-radio">
+                <input class="field-radio__input" type="radio" name="program" value="weight-loss" id="weight-loss" checked>
+                <label class="field-radio__label" for="weight-loss">Похудение</label>
+              </div>
+              <div class="field-radio">
+                <input class="field-radio__input" type="radio" name="program" value="weight-add" id="weight-add">
+                <label class="field-radio__label" for="weight-add">Набор массы</label>
+              </div>
+              <div class="field-radio">
+                <input class="field-radio__input" type="radio" name="program" value="need-advice" id="need-advice">
+                <label class="field-radio__label" for="need-advice">Не знаю (нужен ваш совет)</label>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="form__block">
-          <h2 class="form__block-subtitle subtitle">Дополнительно</h2>
-          <div class="form__checkbox-fields">
-            <div class="field-checkbox">
-              <input class="field-checkbox__input" type="checkbox" name="extra-order" value="sweetener" id="sweetener" checked>
-              <label class="field-checkbox__label" for="sweetener">Сахарозаменитель</label>
-            </div>
-            <div class="field-checkbox">
-              <input class="field-checkbox__input" type="checkbox" name="extra-order" value="drinking-water" id="drinking-water">
-              <label class="field-checkbox__label" for="drinking-water">Питьевая вода</label>
-            </div>
-            <div class="field-checkbox">
-              <input class="field-checkbox__input" type="checkbox" name="extra-order" value="milk" id="milk">
-              <label class="field-checkbox__label" for="milk">Молоко</label>
-            </div>
-            <div class="field-checkbox">
-              <input class="field-checkbox__input" type="checkbox" name="extra-order" value="vitamins" id="vitamins">
-              <label class="field-checkbox__label" for="vitamins">Витамины</label>
+          <div class="form__block form__block--contacts">
+            <h2 class="form__block-subtitle subtitle">Контактные данные <span class="form__block-subtitle-comment">(владельца&nbsp;кота)</span></h2>
+            <div class="form__text-fields form__text-fields--contacts">
+              <div class="form__row field-text">
+                <label class="field-text__label field-text__label--email" for="owner-email">E-mail:*</label>
+                <div class="field-text__input-wrapper  field-text__input-wrapper--icon">
+                  <input class="field-text__input" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
+
+                  <div class="field-text__icon-wrap">
+                    <svg class="field-text__icon field-text__icon--email" viewBox="0 0 17 13" width="17" height="13">
+                      <path d="M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="form__row field-text">
+                <label class="field-text__label field-text__label--phone" for="owner-phone">Телефон:*</label>
+                <div class="field-text__input-wrapper  field-text__input-wrapper--icon">
+                  <input class="field-text__input" type="text" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
+
+                  <div class="field-text__icon-wrap">
+                    <svg class="field-text__icon  field-text__icon--phone" viewBox="0 0 20 20" width="20" height="20">
+                      <path d="M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zM8.1 19.4v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8H6.8v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1C1.5-.1.1 1.2 0 2.9V16.8c-.1 1.7 1.2 3.1 2.9 3.1H7.5c.3.1.6-.2.6-.5z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="form__submit-block">
-          <button class="form__submit-button button" type="submit">Отправить заявку</button>
-          <small class="form__submit-note">* — Обязательные поля</small>
-        </div>
-      </form>
+          <div class="form__block form__block--comment">
+            <h2 class="form__block-subtitle subtitle">Комментарий</h2>
+            <div class="form__text-fields">
+              <div class="field-text">
+                <label class="field-text__label visually-hidden" for="owner-comment">Введите комментарий</label>
+                <textarea class="field-text__input field-text__input--comment" name="owner-comment" id="owner-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__block form__block--extra">
+            <h2 class="form__block-subtitle subtitle">Дополнительно</h2>
+            <div class="form__checkbox-fields">
+              <div class="form__checkbox-field field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="extra-order" value="sweetener" id="sweetener" checked>
+                <label class="field-checkbox__label" for="sweetener">Сахарозаменитель</label>
+              </div>
+              <div class="form__checkbox-field field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="extra-order" value="drinking-water" id="drinking-water">
+                <label class="field-checkbox__label" for="drinking-water">Питьевая вода</label>
+              </div>
+              <div class="form__checkbox-field field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="extra-order" value="milk" id="milk">
+                <label class="field-checkbox__label" for="milk">Молоко</label>
+              </div>
+              <div class="form__checkbox-field field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="extra-order" value="vitamins" id="vitamins">
+                <label class="field-checkbox__label" for="vitamins">Витамины</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__submit">
+            <div class="form__submit-block">
+              <button class="form__submit-button button button--large" type="submit">Отправить заявку</button>
+            </div>
+            <div class="form__submit-block">
+              <small class="form__submit-note">* — Обязательные поля</small>
+            </div>
+          </div>
+        </form>
+      </div>
     </main>
 
     <footer class="page-footer">
 
       <section class="page-footer__contacts contacts">
-        <div class="contacts__container container">
-          <div class="contacts__layout">
-            <div class="contacts__title-block">
-              <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
-            </div>
-            <div class="contacts__info-block">
-              <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-            </div>
-          </div>
-        </div>
         <div class="contacts__map-wrapper">
           <img class="contacts__map-img" src="img/map.png" width="320" height="362" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
           <div class="contacts__map" id="map">Схема проезда</div>
+          <div class="contacts__info">
+            <div class="contacts__container container">
+              <div class="contacts__layout">
+                <div class="contacts__title-block">
+                  <h2 class="contacts__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+                </div>
+                <div class="contacts__info-block">
+                  <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></address>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -214,6 +234,7 @@
     </footer>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss"></script>
+    <script src="js/picturefill.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

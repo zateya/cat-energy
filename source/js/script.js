@@ -2,6 +2,7 @@
   var mainNav = document.querySelector(".main-nav");
   var navToggle = document.querySelector(".main-nav__toggle");
   var mapElement = document.querySelector("#map");
+  var mapWrapper = document.querySelector(".contacts__map-wrapper");
 
   if (navToggle) {
     navToggle.classList.remove("main-nav__toggle--hidden");
@@ -35,9 +36,8 @@
       var image = {
         url: "img/map-pin.png",
         size: new google.maps.Size(124, 106),
-        scaledSize: new google.maps.Size(62, 53),
         origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(31, 53)
+        anchor: new google.maps.Point(62, 53)
       };
 
       var marker = new google.maps.Marker({
@@ -51,7 +51,18 @@
 
     function resizeMap() {
       google.maps.event.trigger(map, "resize");
-      map.panTo(new google.maps.LatLng(59.939181, 30.321469));
+      var mapHeight = parseInt(getComputedStyle(mapWrapper).minHeight, 10);
+      var mapPaddingBottom = parseInt(getComputedStyle(mapWrapper).paddingBottom, 10);
+      if (mapHeight === 400 || mapPaddingBottom === 396) {
+        map.setZoom(17);
+      } else {
+        map.setZoom(16);
+      }
+      if (mapHeight === 400) {
+        map.panTo(new google.maps.LatLng(59.939207, 30.318616));
+      } else {
+        map.panTo(new google.maps.LatLng(59.939181, 30.321469));
+      }
     }
   }
 })();

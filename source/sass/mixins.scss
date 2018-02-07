@@ -20,3 +20,30 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@mixin set-paddings () {
+  padding-left: $phones-paddings;
+  padding-right: $phones-paddings;
+
+  @media (min-width: $tablets) {
+    padding-left: $tablets-paddings;
+    padding-right: $tablets-paddings;
+  }
+
+  @media (min-width: $desktops) {
+    padding-left: $desktops-paddings;
+    padding-right: $desktops-paddings;
+  }
+}
+
+@mixin set-container () {
+  @media (min-width: $tablets) {
+    max-width: $tablets-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: $desktops) {
+    max-width: $desktops-max-width;
+  }
+}

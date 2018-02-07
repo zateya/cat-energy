@@ -8,19 +8,30 @@ $silver: #bababa;
 $grey95: #f2f2f2;
 $grey93: #ededed;
 $grey92: #ebebeb;
+$grey92-2: #eaeaea;
 $grey91: #e6e6e6;
 $grey85: #d9d9d9;
 $grey80: #cdcdcd;
 $grey40: #666666;
-$dark-blue: #212735;
+$grey26: #3f4242;
+$blue-dark: #212735;
 $nero: #222222;
 $almost-black: #111111;
 $black: #000000;
 
 /*sizes and breakpoints*/
 $phones: 320px;
-$tablets: 0;
-$desktops: 0;
+$phones-max: 767px;
+$tablets: 768px;
+$tablets-max: 1299px;
+$desktops: 1300px;
+
+$tablets-max-width: 768px;
+$desktops-max-width: 1300px;
+
+$phones-paddings: 20px;
+$tablets-paddings: 30px;
+$desktops-paddings: 40px;
 
 /*retina*/
 $retina-dpi: 144dpi;

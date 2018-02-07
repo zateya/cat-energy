@@ -1,38 +1,58 @@
-.page-main {
+.page-main__title-block {
   padding-top: 27px;
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 38px;
 
-  &--index {
-    max-width: inherit;
-    padding-top: 0;
-    margin: 0;
+  @media (min-width: $tablets) {
+    padding-top: 58px;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktops) {
+    padding-top: 21px;
   }
 }
 
 .page-main__title {
-  margin-top: 0;
-  margin-bottom: 38px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0;
 }
 
-.page-main__lead {
-  margin-bottom: 38px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.page-main__title + .page-main__catalog {
+.page-main__title-block + .page-main__catalog {
   margin-top: 41px;
+
+  @media (min-width: $tablets) {
+    margin-top: 83px;
+  }
+}
+
+.page-main__catalog {
+  margin-left: -$phones-paddings;
+  margin-right: -$phones-paddings;
+
+  @media (min-width: $tablets) {
+    margin: 0;
+  }
+}
+
+.page-main__form {
+  margin-left: -$phones-paddings;
+  margin-right: -$phones-paddings;
+
+  @media (min-width: $tablets) {
+    margin: 0;
+  }
 }
 
 .page-main__extra-products {
   margin-top: 28px;
   padding-bottom: 35px;
-}
 
-.page-main__promo {
-  margin-top: 39px;
+  @media (min-width: $tablets) {
+    margin-top: 68px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: $desktops) {
+    margin-top: 75px;
+    padding-bottom: 86px;
+  }
 }

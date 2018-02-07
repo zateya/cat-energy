@@ -1,6 +1,58 @@
+.page-header {
+  @media (min-width: $tablets) {
+    padding: 24px 0 0;
+  }
+
+  @media (min-width: $desktops) {
+    max-width: 100%;
+    padding: 54px 0;
+    overflow: hidden;
+  }
+
+  &--index {
+    position: relative;
+    padding-bottom: 22px;
+
+    @media (min-width: $tablets) {
+      padding-bottom: 0;
+    }
+
+    @media (min-width: $desktops) {
+      padding-bottom: 54px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        height: 696px;
+        width: calc(100% / 2 - 40px);
+        background-color: $green-darker;
+        background-image: url("../img/test-index-background-desktop.jpg");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        z-index: -1;
+      }
+    }
+  }
+}
+
 .page-header__layout {
   position: relative;
   border-bottom: 1px solid $grey91;
+
+  @media (min-width: $tablets) {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 0;
+
+    @include set-container;
+    @include set-paddings;
+  }
 }
 
 .page-header__logo-block {
@@ -11,17 +63,46 @@
   padding-right: 54px;
   padding-bottom: 10px;
   padding-left: 20px;
+
+  @media (min-width: $tablets) {
+    flex-shrink: 0;
+    padding: 0;
+  }
 }
 
 .page-header__logo-link {
   padding-top: 1px;
   padding-bottom: 6px;
+
+  @media (min-width: $tablets) {
+    padding: 0;
+  }
+
+  &[href]:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__logo {
   display: block;
   width: 34px;
   height: 38px;
+
+  @media (min-width: $tablets) {
+    width: 173px;
+    height: 58px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktops) {
+    width: 202px;
+    height: 59px;
+  }
 }
 
 .page-header__logo-sign-link {
@@ -29,6 +110,10 @@
   margin-right: auto;
   padding-top: 14px;
   padding-bottom: 13px;
+
+  @media (min-width: $tablets) {
+    display: none;
+  }
 }
 
 .page-header__logo-sign {

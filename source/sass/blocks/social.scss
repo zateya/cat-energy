@@ -10,6 +10,10 @@
 
 .social__item {
   margin: 8px 1.5px 6px;
+
+  @media (min-width: $tablets) {
+    margin: 2px 14px 4px;
+  }
 }
 
 .social__item-link {
@@ -20,6 +24,11 @@
   align-items: center;
   width: 50px;
   height: 50px;
+
+  @media (min-width: $tablets) {
+    width: auto;
+    height: 28px;
+  }
 }
 
 .social__item-icon {
@@ -30,16 +39,32 @@
     height: 12px;
     margin-top: -1px;
     margin-left: -3px;
+
+    @media (min-width: $tablets) {
+      width: 30px;
+      height: 16px;
+      margin: 0;
+    }
   }
 
   &--inst {
     width: 16px;
     height: 16px;
+
+    @media (min-width: $tablets) {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &--fb {
     width: 10px;
     height: 19px;
+
+    @media (min-width: $tablets) {
+      width: 14px;
+      height: 28px;
+    }
   }
 }
 

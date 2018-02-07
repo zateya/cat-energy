@@ -14,8 +14,9 @@
   text-transform: uppercase;
   color: $nero;
 
-  &--contacts {
-    margin-right: 10px;
+  @media (min-width: $tablets) {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
@@ -31,6 +32,13 @@
   background-color: $white;
   border: 1px solid rgba($grey80, 0.5);
 
+  @media (min-width: $tablets) {
+    height: 52px;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 6px 18px;
+  }
+
   &::placeholder {
     color: $grey-dark;
     opacity: 1;
@@ -41,8 +49,8 @@
   }
 
   &:focus {
-    border-color: $dark-blue;
-    box-shadow: inset 0 0 0 1px $dark-blue;
+    border-color: $blue-dark;
+    box-shadow: inset 0 0 0 1px $blue-dark;
     outline: none;
   }
 
@@ -50,6 +58,12 @@
     height: 150px;
     padding-right: 10px;
     resize: none;
+
+    @media (min-width: $tablets) {
+      height: 174px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
 
   &--invalid {
@@ -67,12 +81,22 @@
   padding-right: 47px;
 }
 
-.field-text__icon {
+.field-text__icon-wrap {
   position: absolute;
-  display: block;
-  top: 50%;
-  left: calc(100% - 33px);
-  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 32px;
+
+  @media (min-width: $tablets) {
+    width: 37px;
+  }
+}
+
+.field-text__icon {
   fill: $nero;
 
   &--email {
@@ -86,10 +110,10 @@
   }
 }
 
-.field-text__input:focus ~ .field-text__icon {
+.field-text__input:focus ~ .field-text__icon-wrap .field-text__icon {
   fill: $green;
 }
 
-.field-text__input--invalid ~ .field-text__icon {
+.field-text__input--invalid ~ .field-text__icon-wrap .field-text__icon {
   fill: $coral-light;
 }

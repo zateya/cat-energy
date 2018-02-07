@@ -23,10 +23,22 @@
   }
 }
 
-.button--long-text.button {
+.button--intro {
+  @media (min-width: $tablets) {
+    width: auto;
+  }
+}
+
+.button--large {
+  padding: 11px 22px;
   font-size: 14px;
   line-height: 18px;
-  padding: 11px 22px;
+
+  @media (min-width: $tablets) {
+    padding: 16px 27px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .button--info.button {

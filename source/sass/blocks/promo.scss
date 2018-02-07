@@ -1,10 +1,14 @@
 .promo {
-  display: block;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 280px;
   min-height: 289px;
   margin-left: auto;
   margin-right: auto;
-  padding: 65px 0 43px;
+  padding: 65px 55px 43px;
   text-decoration: none;
   text-align: center;
   color: $white;
@@ -13,29 +17,57 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
 
-.promo__title {
-  position: relative;
-  max-width: 170px;
-  margin: 0 auto;
-  padding-top: 121px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
+  @media (min-width: $tablets) {
+    width: auto;
+    margin: 0;
+  }
+
+  @media (min-width: $desktops) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
   &::before {
+    flex-shrink: 0;
     content: "";
-    position: absolute;
+    position: static;
     display: block;
-    top: 0;
-    left: 50%;
     width: 55px;
     height: 60px;
-    margin-left: -28px;
     background: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 55px 60px;
+  }
+}
+
+.promo__title {
+  width: 100%;
+  margin-top: 62px;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+@media (min-width: $tablets) and (max-width: $tablets-max) {
+  .promo {
+    min-height: 200px;
+    padding: 65px 120px 65px 90px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    text-align: left;
+
+    &::before {
+      padding-bottom: 10px;
+    }
+  }
+
+  .promo__title {
+    width: 165px;
+    margin-top: 0;
+    margin-left: auto;
+    padding-top: 7px;
   }
 }

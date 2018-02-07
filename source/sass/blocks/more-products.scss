@@ -1,7 +1,23 @@
 .more-products {
+  width: 100%;
+
+  @media (min-width: $tablets) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 38px 40px;
+    box-shadow: 0 0 0 1px rgba($grey80, 0.5);
+  }
+}
+
+.more-products__info {
   position: relative;
   padding-top: 80px;
   text-align: center;
+
+  @media (min-width: $tablets) {
+    padding-top: 163px;
+  }
 
   &::before {
     content: "";
@@ -15,7 +31,15 @@
     background-image: url("../img/icon-plus-mobile.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 100% auto;
     opacity: 0.2;
+
+    @media (min-width: $tablets) {
+      top: 54px;
+      width: 60px;
+      height: 60px;
+      margin-left: -30px;
+    }
   }
 }
 
@@ -27,18 +51,35 @@
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: $almost-black;
+
+  @media (min-width: $tablets) {
+    font-size: 20px;
+  }
 }
 
 .more-products__lead {
   margin: 0;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: $tablets) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .more-products__title + .more-products__lead {
   margin-top: 8px;
+
+  @media (min-width: $tablets) {
+    margin-top: 25px;
+  }
 }
 
 .more-products__link {
   margin-top: 20px;
+
+  @media (min-width: $tablets) {
+    margin-top: auto;
+  }
 }
