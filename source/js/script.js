@@ -51,7 +51,6 @@
 
     function resizeMap() {
       google.maps.event.trigger(map, "resize");
-      console.log(mapWrapper);
       var mapHeight = parseInt(getComputedStyle(mapWrapper).minHeight, 10);
       var mapPaddingBottom = parseInt(getComputedStyle(mapWrapper).paddingBottom, 10);
       if (mapHeight === 400 || mapPaddingBottom === 396) {
