@@ -1,6 +1,4 @@
 .product {
-  width: 100%;
-
   @media (min-width: $tablets) {
     display: flex;
     flex-direction: column;
@@ -30,7 +28,6 @@
     align-items: flex-end;
     width: 100%;
     min-height: 208px;
-    overflow: hidden;
   }
 }
 
@@ -40,31 +37,12 @@
   height: 144px;
 
   @media (min-width: $tablets) {
-    max-width: none;
+    width: 324px;
+    height: auto;
   }
 
-  &--small {
-    @media (min-width: $tablets) {
-      width: 324px;
-      height: 172px;
-    }
-
-    @media (min-width: $desktops) {
-      width: 245px;
-      height: 174px;
-    }
-  }
-
-  &--large {
-    @media (min-width: $tablets) {
-      width: 324px;
-      height: 208px;
-    }
-
-    @media (min-width: $desktops) {
-      width: 245px;
-      height: 208px;
-    }
+  @media (min-width: $desktops) {
+    width: 245px;
   }
 }
 
