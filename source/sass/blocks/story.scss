@@ -19,7 +19,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
 
@@ -82,13 +81,15 @@
   margin-right: -$phones-paddings;
 
   @media (min-width: $tablets) {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (min-width: $desktops) {
-    width: calc(50% - 40px);
+    width: calc(50% + 80px);
     margin-top: -190px;
+    margin-left: auto;
+    margin-right: -$desktops-paddings;
   }
 }
 

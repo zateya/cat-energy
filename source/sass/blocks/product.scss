@@ -1,6 +1,4 @@
 .product {
-  width: 100%;
-
   @media (min-width: $tablets) {
     display: flex;
     flex-direction: column;
@@ -20,6 +18,7 @@
 .product__img-block {
   flex-shrink: 0;
   width: 140px;
+  height: 144px;
 
   @media (min-width: $tablets) {
     position: relative;
@@ -37,18 +36,13 @@
   width: 140px;
   height: 144px;
 
-  &--small {
-    @media (min-width: $tablets) {
-      width: 161px;
-      height: 172px;
-    }
+  @media (min-width: $tablets) {
+    width: 324px;
+    height: auto;
   }
 
-  &--large {
-    @media (min-width: $tablets) {
-      width: 195px;
-      height: 208px;
-    }
+  @media (min-width: $desktops) {
+    width: 245px;
   }
 }
 

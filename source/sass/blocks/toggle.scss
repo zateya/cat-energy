@@ -1,13 +1,9 @@
 .toggle {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
   padding-bottom: 36px;
 
   @media (min-width: $tablets) {
+    width: 690px;
     padding-bottom: 66px;
 
     &::before {
@@ -24,8 +20,9 @@
   }
 
   @media (min-width: $desktops) {
+    width: auto;
+    padding-bottom: 67px;
     background-color: transparent;
-    padding-bottom: 34px;
 
     &::before {
       display: none;
@@ -37,6 +34,14 @@
   @include visually-hidden;
 }
 
+.toggle__control {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 3;
+}
+
 .toggle__label {
   font-size: 16px;
   line-height: 20px;
@@ -44,7 +49,6 @@
   text-transform: uppercase;
   color: $almost-black;
   user-select: none;
-  z-index: 3;
   cursor: pointer;
 
   @media (min-width: $tablets) {
@@ -68,17 +72,11 @@
   display: block;
   width: 84px;
   margin: 3px 18px;
-  z-index: 3;
 
   @media (min-width: $tablets) {
-    padding: 14px 0;
-    margin: 0 22px;
     width: 428px;
-  }
-
-  @media (min-width: $desktops) {
-    flex-grow: 1;
-    width: auto;
+    margin: 0 21px 0 23px;
+    padding: 15px 0 13px;
   }
 }
 
@@ -96,14 +94,14 @@
   }
 }
 
-.toggle__control {
+.toggle__button {
   position: absolute;
   display: block;
   top: 50%;
   left: 5px;
   width: 35px;
   height: 6px;
-  transform: translateY(-50%);
+  margin-top: -3px;
   background-color: #68b738;
   border-radius: 3px;
   text-indent: -1000px;
@@ -117,7 +115,8 @@
     height: 34px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: -16px;
+    margin-left: -16px;
     background-color: $white;
     border: 1px solid $grey80;
     border-radius: 50%;
@@ -148,19 +147,20 @@
 }
 
 .toggle__items {
-  order: -1;
   width: 100%;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablets) {
-    margin-bottom: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 14px;
 
     &::after {
       content: "";
       position: absolute;
       display: block;
       top: 0;
-      left: 0;
+      left: auto;
       bottom: 0;
       width: 100vw;
       background-image: linear-gradient(to bottom, $white, $white 169px, $grey92-2 169px, $grey92-2);
@@ -168,7 +168,10 @@
   }
 
   @media (min-width: $desktops) {
-    margin-bottom: 0;
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 33px;
 
     &::after {
       background-image: linear-gradient(to bottom, $white, $white 190px, $grey92-2 190px, $grey92-2);
@@ -177,7 +180,7 @@
 }
 
 .toggle__item {
-  &--on {
+  &--after {
     display: none;
   }
 
@@ -185,7 +188,7 @@
     position: relative;
     z-index: 1;
 
-    &--off {
+    &--before {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -195,21 +198,14 @@
       background-image: linear-gradient(to bottom, $white, $white 169px, $grey95 169px, $grey95);
     }
 
-    &--on {
+    &--after {
       display: block;
-      margin-left: 25px;
     }
   }
 
   @media (min-width: $desktops) {
-    &--off {
+    &--before {
       background-image: linear-gradient(to bottom, $white, $white 190px, $grey95 190px, $grey95);
-      width: calc(50% + 80px);
-      margin-left: -80px;
-    }
-
-    &--on {
-      margin-left: -80px;
     }
   }
 }
@@ -223,27 +219,35 @@
   margin-right: auto;
 
   @media (min-width: $tablets) {
-    width: 708px;
+    width: 690px;
+    max-width: 690px;
     height: 517px;
     margin: 0;
   }
+}
 
+.toggle__item--before .toggle__img {
   @media (min-width: $desktops) {
-    width: 690px;
-    height: 517px;
+    margin-left: -40px;
+  }
+}
+
+.toggle__item--after .toggle__img {
+  @media (min-width: $desktops) {
+    margin-left: -40px;
   }
 }
 
 @media (max-width: $phones-max) {
-  .toggle__input:checked ~ .toggle__range .toggle__control {
+  .toggle__input:checked ~ .toggle__control .toggle__button {
     left: calc(100% - 40px);
   }
 
-  .toggle__input:checked ~ .toggle__items .toggle__item--on {
+  .toggle__input:checked ~ .toggle__items .toggle__item--after {
     display: block;
   }
 
-  .toggle__input:checked ~ .toggle__items .toggle__item--off {
+  .toggle__input:checked ~ .toggle__items .toggle__item--before {
     display: none;
   }
 }

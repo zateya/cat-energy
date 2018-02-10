@@ -18,14 +18,31 @@
   background-position: center;
   background-size: cover;
 
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
   @media (min-width: $tablets) {
     width: auto;
     margin: 0;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  @media (min-width: $tablets) and (min-resolution: $retina-dpi),
+    (min-width: $tablets) and (min-resolution: $retina-dppx) {
+    background-image: url("../img/gift-photo-tablet@2x.jpg");
   }
 
   @media (min-width: $desktops) {
     padding-left: 40px;
     padding-right: 40px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+
+  @media (min-width: $desktops) and (min-resolution: $retina-dpi),
+    (min-width: $desktops) and (min-resolution: $retina-dppx) {
+    background-image: url("../img/gift-photo-desktop@2x.jpg");
   }
 
   &::before {
