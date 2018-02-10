@@ -20,6 +20,7 @@
 .product__img-block {
   flex-shrink: 0;
   width: 140px;
+  height: 144px;
 
   @media (min-width: $tablets) {
     position: relative;
@@ -29,6 +30,7 @@
     align-items: flex-end;
     width: 100%;
     min-height: 208px;
+    overflow: hidden;
   }
 }
 
@@ -37,16 +39,30 @@
   width: 140px;
   height: 144px;
 
+  @media (min-width: $tablets) {
+    max-width: none;
+  }
+
   &--small {
     @media (min-width: $tablets) {
-      width: 161px;
+      width: 324px;
       height: 172px;
+    }
+
+    @media (min-width: $desktops) {
+      width: 245px;
+      height: 174px;
     }
   }
 
   &--large {
     @media (min-width: $tablets) {
-      width: 195px;
+      width: 324px;
+      height: 208px;
+    }
+
+    @media (min-width: $desktops) {
+      width: 245px;
       height: 208px;
     }
   }

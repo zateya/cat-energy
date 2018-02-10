@@ -37,11 +37,11 @@
         url: "img/map-pin.png",
         size: new google.maps.Size(124, 106),
         origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(62, 53)
+        anchor: new google.maps.Point(62, 106)
       };
 
       var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(59.939181, 30.321469),
+        position: new google.maps.LatLng(59.938790, 30.323199),
         map: map,
         optimized: false,
         icon: image
@@ -59,9 +59,9 @@
         map.setZoom(16);
       }
       if (mapHeight === 400) {
-        map.panTo(new google.maps.LatLng(59.939207, 30.318616));
+        map.panTo(new google.maps.LatLng(59.938993, 30.319356));
       } else {
-        map.panTo(new google.maps.LatLng(59.939181, 30.321469));
+        map.panTo(new google.maps.LatLng(59.938790, 30.323199));
       }
     }
   }

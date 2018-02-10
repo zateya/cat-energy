@@ -37,8 +37,8 @@
     padding-bottom: 61px;
 
 
-    &:first-child {
-      margin-top: 26px;
+    &:nth-child(2) {
+      margin-top: 0;
     }
   }
 }
