@@ -75,7 +75,10 @@
 
   @media (min-width: $tablets) {
     width: 428px;
-    margin: 0 21px 0 23px;
+    margin-top: 0;
+    margin-right: 21px;
+    margin-bottom: 0;
+    margin-left: 23px;
     padding: 15px 0 13px;
   }
 }
@@ -89,7 +92,7 @@
 
   @media (min-width: $tablets) {
     height: 6px;
-    background-color: #dcdcdc;
+    background-color: $grey86;
     border: 0;
   }
 }
@@ -102,7 +105,7 @@
   width: 35px;
   height: 6px;
   margin-top: -3px;
-  background-color: #68b738;
+  background-color: $green;
   border-radius: 3px;
   text-indent: -1000px;
   overflow: hidden;
@@ -224,15 +227,7 @@
     height: 517px;
     margin: 0;
   }
-}
 
-.toggle__item--before .toggle__img {
-  @media (min-width: $desktops) {
-    margin-left: -40px;
-  }
-}
-
-.toggle__item--after .toggle__img {
   @media (min-width: $desktops) {
     margin-left: -40px;
   }

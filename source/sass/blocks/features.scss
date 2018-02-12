@@ -6,7 +6,7 @@
     max-width: 100%;
     padding-top: 45px;
     padding-bottom: 0;
-    box-shadow: inset 0 -1px #e6e6e6;
+    box-shadow: inset 0 -1px $grey91;
   }
 
   @media (min-width: $desktops) {
@@ -133,7 +133,7 @@
     font-size: 281px;
     line-height: 235px;
     font-family: "Oswald", "Arial", sans-serif;
-    color: #f2f2f2;
+    color: $grey95;
     z-index: -1;
     text-align: center;
 
