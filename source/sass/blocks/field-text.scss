@@ -18,6 +18,30 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktops) {
+    margin-right: 18px;
+  }
+
+  &--email {
+    margin-right: 10px;
+
+    @media (min-width: $tablets) {
+      margin-right: 15px;
+    }
+
+    @media (min-width: $desktops) {
+      margin-right: 22px;
+    }
+  }
+
+  &--phone {
+    margin-right: 10px;
+
+    @media (min-width: $desktops) {
+      margin-right: 16px;
+    }
+  }
 }
 
 .field-text__input {

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page">
     <header class="page-header page-header--index">
@@ -142,31 +142,31 @@
               <div class="toggle__items">
                 <div class="toggle__item toggle__item--before">
                   <picture>
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp, img/before-tablet@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/before@1x.webp, img/before@2x.webp 2x">
                     <source type="image/webp" srcset="img/before-mobile@1x.webp, img/before-mobile@2x.webp 2x">
 
-                    <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/before@1x.png, img/before@2x.png 2x">
                     <img class="toggle__img" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="До">
                   </picture>
                 </div>
                 <div class="toggle__item toggle__item--after">
                   <picture>
-                    <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp, img/after-tablet@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/after@1x.webp, img/after@2x.webp 2x">
                     <source type="image/webp" srcset="img/after-mobile@1x.webp, img/after-mobile@2x.webp 2x">
 
-                    <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
+                    <source media="(min-width: 768px)" srcset="img/after@1x.png, img/after@2x.png 2x">
                     <img class="toggle__img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="После">
                   </picture>
                 </div>
               </div>
 
               <div class="toggle__control">
-                <label class="toggle__label toggle__label--before" for="story-toggle-input">Было</label>
+                <label class="toggle__label toggle__label--before" for="story-toggle-input" tabindex="0">Было</label>
                 <label class="toggle__range" for="story-toggle-input">
                   <span class="toggle__scale"></span>
                   <span class="toggle__button" tabindex="0">До/После</span>
                 </label>
-                <label class="toggle__label toggle__label--after" for="story-toggle-input">Стало</label>
+                <label class="toggle__label toggle__label--after" for="story-toggle-input" tabindex="0">Стало</label>
               </div>
             </div>
           </div>
@@ -179,6 +179,10 @@
       <section class="page-footer__contacts contacts contacts--index">
         <div class="contacts__map-wrapper">
           <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp, img/bg-map-mobile@2x.webp 2x">
+
             <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
             <img class="contacts__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
@@ -222,10 +226,10 @@
                 <li class="social__item">
                   <a class="social__item-link" href="https://www.instagram.com/htmlacademy/" target="_blank">
                     <svg class="social__item-icon social__item-icon--small social__item-icon--inst" width="16" height="16">
-                      <use xlink:href="img/sprite.svg#icon-inst-mobile"></use>
+                      <use xlink:href="img/sprite.svg#icon-insta-mobile"></use>
                     </svg>
                     <svg class="social__item-icon social__item-icon--large social__item-icon--inst" width="23" height="23">
-                      <use xlink:href="img/sprite.svg#icon-inst"></use>
+                      <use xlink:href="img/sprite.svg#icon-insta"></use>
                     </svg>
                   </a>
                 </li>
@@ -245,7 +249,7 @@
               <a class="page-footer__copy-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
                 <span class="page-footer__copy-sign">HTML Academy</span>
                 <svg class="page-footer__copy-logo" width="27" height="34">
-                  <use xlink:href="img/sprite.svg#logo-academy"></use>
+                  <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
                 </svg>
               </a>
             </div>
@@ -255,10 +259,10 @@
 
     </footer>
 
-    <script src="js/svg4everybody.js"></script>
+    <script src="js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss"></script>
     <script src="js/picturefill.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
