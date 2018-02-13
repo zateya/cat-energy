@@ -4,7 +4,9 @@
   }
 
   @media (min-width: $desktops) {
-    width: 570px;
+    &--index {
+      background-color: $green;
+    }
   }
 }
 
@@ -19,6 +21,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+  }
+}
+
+.main-nav--index .main-nav__items {
+  @media (min-width: $desktops) {
+    position: relative;
+    z-index: 1;
   }
 }
 

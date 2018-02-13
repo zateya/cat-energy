@@ -1,6 +1,12 @@
 .page-main {
   max-width: 100%;
   overflow-x: hidden;
+
+  @media (min-width: $desktops) {
+    &--index {
+      padding-top: 80px;
+    }
+  }
 }
 
 .page-main__title-block {
