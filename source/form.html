@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Подбор программы Кэт энерджи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page">
@@ -38,7 +40,7 @@
       </div>
     </header>
 
-    <main class="page-main page-main--inner">
+    <main class="page-main">
       <div class="page-main__container container">
         <div class="page-main__title-block">
           <h1 class="page-main__title title">Подбор программы</h1>
@@ -92,11 +94,9 @@
                 <div class="field-text__input-wrapper  field-text__input-wrapper--icon">
                   <input class="field-text__input" type="email" name="owner-email" id="owner-email" placeholder="kuklachev@gmail.com" required>
 
-                  <div class="field-text__icon-wrap">
-                    <svg class="field-text__icon field-text__icon--email" width="17" height="13">
-                      <use xlink:href="img/sprite.svg#icon-mail"></use>
-                    </svg>
-                  </div>
+                  <svg class="field-text__icon field-text__icon--email" width="17" height="13">
+                    <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  </svg>
                 </div>
               </div>
               <div class="form__row field-text">
@@ -104,11 +104,9 @@
                 <div class="field-text__input-wrapper  field-text__input-wrapper--icon">
                   <input class="field-text__input" type="tel" name="owner-phone" id="owner-phone" placeholder="8 (960) 900-60-90" required>
 
-                  <div class="field-text__icon-wrap">
-                    <svg class="field-text__icon  field-text__icon--phone" viewBox="0 0 20 20">
-                      <use xlink:href="img/sprite.svg#icon-phone"></use>
-                    </svg>
-                  </div>
+                  <svg class="field-text__icon  field-text__icon--phone" viewBox="0 0 20 20">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg>
                 </div>
               </div>
             </div>
@@ -195,6 +193,7 @@
               <ul class="page-footer__social social">
                 <li class="social__item">
                   <a class="social__item-link" href="https://vk.com/htmlacademy" target="_blank">
+                    <span class="visually-hidden">vKontakte</span>
                     <svg class="social__item-icon social__item-icon--small social__item-icon--vk" width="22" height="12">
                       <use xlink:href="img/sprite.svg#icon-vk-mobile"></use>
                     </svg>
@@ -205,6 +204,7 @@
                 </li>
                 <li class="social__item">
                   <a class="social__item-link" href="https://www.instagram.com/htmlacademy/" target="_blank">
+                    <span class="visually-hidden">Instagram</span>
                     <svg class="social__item-icon social__item-icon--small social__item-icon--inst" width="16" height="16">
                       <use xlink:href="img/sprite.svg#icon-insta-mobile"></use>
                     </svg>
@@ -215,6 +215,7 @@
                 </li>
                 <li class="social__item">
                   <a class="social__item-link" href="https://www.facebook.com/htmlacademy" target="_blank">
+                    <span class="visually-hidden">Facebook</span>
                     <svg class="social__item-icon social__item-icon--small social__item-icon--fb" width="10" height="19">
                       <use xlink:href="img/sprite.svg#icon-fb-mobile"></use>
                     </svg>

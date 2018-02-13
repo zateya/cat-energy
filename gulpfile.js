@@ -6,7 +6,8 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var minify = require("gulp-csso");
-var jsmin = require('gulp-jsmin');
+var jsmin = require("gulp-jsmin");
+var htmlmin = require("gulp-htmlmin");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var rename = require("gulp-rename");
@@ -71,6 +72,7 @@ gulp.task("sprite", function () {
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"))
     .pipe(server.stream());
 });
