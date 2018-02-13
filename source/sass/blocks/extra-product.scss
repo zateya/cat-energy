@@ -49,6 +49,20 @@
   }
 }
 
+.extra-product__title-link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .extra-product__amount {
   width: 50%;
 

@@ -34,20 +34,6 @@
 .social__item-icon {
   fill: $grey40;
 
-  &--large {
-    display: none;
-  }
-
-  @media (min-width: $tablets) {
-    &--large {
-      display: block;
-    }
-
-    &--small {
-      display: none;
-    }
-  }
-
   &--vk {
     width: 22px;
     height: 12px;
