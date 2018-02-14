@@ -117,7 +117,7 @@
     width: 34px;
     height: 34px;
     top: 50%;
-    left: 50%;
+    left: 214px;
     margin-top: -16px;
     margin-left: -16px;
     background-color: $white;
@@ -196,7 +196,7 @@
       top: 0;
       bottom: 0;
       z-index: 2;
-      width: 50%;
+      width: calc(50% - 214px + 214px); /* -214px - начало шкалы; +214px - это left положение маркера */
       overflow: hidden;
       background-image: linear-gradient(to bottom, $white, $white 169px, $grey95 169px, $grey95);
     }
