@@ -123,13 +123,13 @@
     background-color: $white;
     border: 1px solid $grey80;
     border-radius: 50%;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px 0 rgba($black, 0.15);
     cursor: pointer;
     transition: none;
     outline: none;
 
     &:hover {
-      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 3px 5px 0 rgba($black, 0.25);
     }
 
     &:active,
