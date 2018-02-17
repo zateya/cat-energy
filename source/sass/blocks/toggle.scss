@@ -61,7 +61,6 @@
       border-color: rgba($almost-black, 0.4);
     }
 
-    &--active,
     &:active {
       border-color: transparent;
     }
@@ -125,8 +124,6 @@
     border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba($black, 0.15);
     cursor: pointer;
-    transition: none;
-    outline: none;
 
     &:hover {
       box-shadow: 0 3px 5px 0 rgba($black, 0.25);
@@ -273,5 +270,11 @@
 
   .toggle__input--after:checked ~ .toggle__items .toggle__item--before {
     width: 0;
+  }
+
+  .toggle__input--before:focus ~ .toggle__control .toggle__label--before,
+  .toggle__input--after:focus ~ .toggle__control .toggle__label--after {
+    border-bottom-style: solid;
+    border-color: rgba($almost-black, 0.4);
   }
 }
