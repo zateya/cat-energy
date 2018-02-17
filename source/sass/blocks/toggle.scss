@@ -61,6 +61,7 @@
       border-color: rgba($almost-black, 0.4);
     }
 
+    &--active,
     &:active {
       border-color: transparent;
     }
@@ -75,10 +76,7 @@
 
   @media (min-width: $tablets) {
     width: 428px;
-    margin-top: 0;
-    margin-right: 21px;
-    margin-bottom: 0;
-    margin-left: 23px;
+    margin: 0 21px 0 23px;
     padding: 15px 0 13px;
   }
 }
@@ -105,7 +103,9 @@
   width: 35px;
   height: 6px;
   margin-top: -3px;
+  padding: 0;
   background-color: $green;
+  border: 0;
   border-radius: 3px;
   text-indent: -1000px;
   overflow: hidden;
@@ -117,20 +117,23 @@
     width: 34px;
     height: 34px;
     top: 50%;
-    left: 214px;
+    left: 50%;
     margin-top: -16px;
-    margin-left: -16px;
+    margin-left: -17px;
     background-color: $white;
     border: 1px solid $grey80;
     border-radius: 50%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
+    transition: none;
+    outline: none;
 
     &:hover {
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
 
-    &:active {
+    &:active,
+    &:focus {
       border: 2px solid $green;
     }
 
@@ -196,9 +199,10 @@
       top: 0;
       bottom: 0;
       z-index: 2;
-      width: calc(50% - 214px + 214px); /* -214px - начало шкалы; +214px - это left положение маркера */
+      width: 50%;
       overflow: hidden;
       background-image: linear-gradient(to bottom, $white, $white 169px, $grey95 169px, $grey95);
+      transition: all 0.3s ease;
     }
 
     &--after {
@@ -235,15 +239,39 @@
 }
 
 @media (max-width: $phones-max) {
-  .toggle__input:checked ~ .toggle__control .toggle__button {
+  .toggle__input--before:checked ~ .toggle__control .toggle__button {
+    left: 5px;
+  }
+
+  .toggle__input--after:checked ~ .toggle__control .toggle__button {
     left: calc(100% - 40px);
   }
 
-  .toggle__input:checked ~ .toggle__items .toggle__item--after {
-    display: block;
+  .toggle__input--after:checked ~ .toggle__items .toggle__item--before,
+  .toggle__input--before:checked ~ .toggle__items .toggle__item--after {
+    display: none;
   }
 
-  .toggle__input:checked ~ .toggle__items .toggle__item--before {
-    display: none;
+  .toggle__input--after:checked ~ .toggle__items .toggle__item--after,
+  .toggle__input--before:checked ~ .toggle__items .toggle__item--before {
+    display: block;
+  }
+}
+
+@media (min-width: $tablets) {
+  .toggle__input--before:checked ~ .toggle__control .toggle__button {
+    left: 0;
+  }
+
+  .toggle__input--before:checked ~ .toggle__items .toggle__item--before {
+    width: 100%;
+  }
+
+  .toggle__input--after:checked ~ .toggle__control .toggle__button {
+    left: 100%;
+  }
+
+  .toggle__input--after:checked ~ .toggle__items .toggle__item--before {
+    width: 0;
   }
 }

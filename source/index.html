@@ -139,7 +139,8 @@
               </div>
             </div>
             <div class="story__toggle toggle">
-              <input class="toggle__input" type="checkbox" id="story-toggle-input" name="story-toggle-input">
+              <input class="toggle__input toggle__input--before" type="radio" id="story-input-before" name="story-input">
+              <input class="toggle__input toggle__input--after" type="radio" id="story-input-after" name="story-input">
 
               <div class="toggle__items">
                 <div class="toggle__item toggle__item--before">
@@ -163,12 +164,12 @@
               </div>
 
               <div class="toggle__control">
-                <label class="toggle__label toggle__label--before" for="story-toggle-input" tabindex="0">Было</label>
-                <label class="toggle__range" for="story-toggle-input">
-                  <span class="toggle__scale"></span>
-                  <span class="toggle__button" tabindex="0">До/После</span>
-                </label>
-                <label class="toggle__label toggle__label--after" for="story-toggle-input" tabindex="0">Стало</label>
+                <label class="toggle__label toggle__label--before" for="story-input-before" tabindex="0">Было</label>
+                <div class="toggle__range">
+                  <div class="toggle__scale"></div>
+                  <button class="toggle__button" type="button">До/После</button>
+                </div>
+                <label class="toggle__label toggle__label--after" for="story-input-after" tabindex="0">Стало</label>
               </div>
             </div>
           </div>
