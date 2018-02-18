@@ -1496,25 +1496,26 @@ img {
   text-decoration: none; }
   @media (min-width: 768px) {
     .programs__item-link {
-      padding: 0 57px 0 0; } }
+      padding: 0 58px 0 0; } }
   .programs__item-link:active {
     opacity: 0.3; }
   .programs__item-link::after {
     content: "";
     position: absolute;
     display: block;
-    top: 28px;
+    top: 24px;
     right: 9px;
     width: 23px;
     height: 11px;
     background-image: url("../img/icon-right-arrow-verylong.svg");
     background-repeat: no-repeat;
-    background-size: 32px auto;
-    -webkit-transition: 0.3s;
-    transition: 0.3s; }
+    background-size: 32px 11px;
+    background-position: right center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     @media (min-width: 768px) {
       .programs__item-link::after {
-        top: 8px; } }
+        top: 4px; } }
   .programs__item-link:hover::after {
     right: 0;
     width: 32px; }
