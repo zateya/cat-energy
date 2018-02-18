@@ -1499,35 +1499,25 @@ img {
       padding: 0 57px 0 0; } }
   .programs__item-link:active {
     opacity: 0.3; }
-  .programs__item-link::before, .programs__item-link::after {
-    top: 28px;
+  .programs__item-link::after {
     content: "";
     position: absolute;
     display: block;
+    top: 28px;
+    right: 9px;
+    width: 23px;
+    height: 11px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+    background-size: 32px auto;
     -webkit-transition: 0.3s;
     transition: 0.3s; }
     @media (min-width: 768px) {
-      .programs__item-link::before, .programs__item-link::after {
+      .programs__item-link::after {
         top: 8px; } }
-  .programs__item-link::before {
-    right: 15.6px;
-    width: 17px;
-    height: 2.2px;
-    background-color: #3f4242; }
-  .programs__item-link:hover::before {
-    right: 6.6px;
-    width: 26px; }
-  .programs__item-link::after {
-    right: 9px;
-    width: 6.6px;
-    height: 11px;
-    margin-top: -4.4px;
-    border-style: solid;
-    border-width: 5.5px 6.6px;
-    border-color: transparent #3f4242;
-    border-right: 0; }
   .programs__item-link:hover::after {
-    right: 0; }
+    right: 0;
+    width: 32px; }
 
 .features {
   padding-top: 29px;
