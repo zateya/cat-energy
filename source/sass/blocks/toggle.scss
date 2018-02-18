@@ -257,7 +257,7 @@
 
 @media (min-width: $tablets) {
   .toggle__input--before:checked ~ .toggle__control .toggle__button {
-    left: 0;
+    left: 17px;
   }
 
   .toggle__input--before:checked ~ .toggle__items .toggle__item--before {
@@ -265,7 +265,7 @@
   }
 
   .toggle__input--after:checked ~ .toggle__control .toggle__button {
-    left: 100%;
+    left: calc(100% - 17px);
   }
 
   .toggle__input--after:checked ~ .toggle__items .toggle__item--before {
