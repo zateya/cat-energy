@@ -15,7 +15,7 @@ var svgstore = require("gulp-svgstore");
 var run = require("run-sequence");
 var del = require("del");
 var server = require("browser-sync").create();
-var ghpages = require('gh-pages');
+var ghpages = require("gh-pages");
 
 gulp.task("clean", function () {
   return del("build");
