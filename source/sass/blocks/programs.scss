@@ -228,50 +228,34 @@
   text-decoration: none;
 
   @media (min-width: $tablets) {
-    padding: 0 57px 0 0;
+    padding: 0 58px 0 0;
   }
 
   &:active {
     opacity: 0.3;
   }
 
-  &::before,
   &::after {
-    top: 28px;
     content: "";
     position: absolute;
     display: block;
-    transition: 0.3s;
+    top: 24px;
+    right: 9px;
+    width: 23px;
+    height: 11px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+    background-size: 32px 11px;
+    background-position: right center;
+    transition: all 0.3s ease;
 
     @media (min-width: $tablets) {
-      top: 8px;
+      top: 4px;
     }
-  }
-
-  &::before {
-    right: 15.6px;
-    width: 17px;
-    height: 2.2px;
-    background-color: $grey26;
-  }
-
-  &:hover::before {
-    right: 6.6px;
-    width: 26px;
-  }
-
-  &::after {
-    right: 9px;
-    width: 6.6px;
-    height: 11px;
-    margin-top: -4.4px;
-    border-style: solid;
-    border-width: 5.5px 6.6px;
-    border-color: transparent $grey26;
-    border-right: 0;
   }
 
   &:hover::after {
     right: 0;
+    width: 32px;
   }
 }
